@@ -1,0 +1,309 @@
+﻿html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+address,
+big,
+cite,
+code,
+del,
+em,
+font,
+img,
+ins,
+small,
+strong,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  empty-cells: show;
+}
+
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+em {
+  font-style: normal;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fn {
+  float: none;
+}
+
+.al {
+  text-align: left;
+}
+
+.ac {
+  text-align: center;
+}
+
+.ar {
+  text-align: right;
+}
+
+.clr {
+  display: block;
+  overflow: hidden;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-table;
+}
+
+*html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+* + html .clearfix {
+  min-height: 1%;
+}
+
+/*.lh&.ld*/
+.lh {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.lh li, .lh dl, .lh .item {
+  float: left;
+}
+
+.ld {
+  position: relative;
+  zoom: 1;
+}
+
+.ld s, .ld b, .ld .block {
+  position: absolute;
+  overflow: hidden;
+}
+
+body {
+  font: 12px/150% Arial, Verdana, "\5b8b\4f53";
+  color: #666;
+  background: #fff;
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+}
+
+h1 {
+  font: 20px "microsoft yahei", "\5b8b\4f53";
+}
+
+h2, h3 {
+  font-size: 14px;
+}
+
+h4, h5, h6 {
+  font-size: 12px;
+}
+
+a:link, a:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E4393C;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #900;
+}
+
+.w {
+    width: 990px;
+    margin: 0 auto;
+}
+
+/*shortcut*/
+.global-nav .fl b,
+.global-nav .fr b {
+  background-image: url(http://misc.360buyimg.com/lib/skin/2013/i/20130330A.png);
+  background-repeat: no-repeat;
+}
+.global-nav,
+.global-nav .w {
+  height: 30px;
+  background: #F7F7F7;
+}
+.global-nav {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  line-height: 30px;
+}
+.global-nav li {
+  height: 30px;
+  padding: 0 11px 0 12px;
+}
+.global-nav li s {
+  top: 9px;
+  left: 0;
+  width: 0px;
+  height: 12px;
+  border-left: 1px solid #DDD;
+  overflow: hidden;
+}
+.global-nav b {
+  transition: transform 0.2s ease-in 0s;
+}
+.global-nav .fl {
+  overflow: visible;
+}
+.global-nav .fl .fore1 {
+  padding-left: 16px;
+  z-index: 1;
+}
+.global-nav .fl b {
+  top: 8px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  background-position: -90px -23px;
+  cursor: pointer;
+}
+.global-nav .fl li:hover b {
+  transform: rotate(720deg);
+}
+.global-nav .fl .jtip {
+  left: 68px;
+  top: 6px;
+  width: 120px;
+  line-height: 16px;
+}
+.global-nav .fr {
+  height: 30px;
+  overflow: visible;
+}
+.global-nav .fr b {
+  top: 13px;
+  right: 8px;
+  width: 7px;
+  height: 4px;
+  background-position: -95px -55px;
+}
+.global-nav .menu {
+  width: 60px;
+  z-index: 10;
+}
+.global-nav .dd {
+  display: none;
+}
+.global-nav .hover .outline,
+.global-nav .hover .dd {
+  position: absolute;
+  border: 1px solid #DDD;
+  background: #fff;
+  -moz-box-shadow: 0 0 10px #DDD;
+  -webkit-box-shadow: 0 0 10px #DDD;
+  box-shadow: 0 0 10px #DDD;
+}
+.global-nav .hover .outline {
+  z-index: -1;
+  left: 5px;
+  top: 3px;
+  width: 73px;
+  height: 28px;
+}
+.global-nav .hover .blank {
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  left: 6px;
+  width: 73px;
+  height: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.global-nav .hover .dd {
+  display: block;
+  top: 30px;
+}
+.global-nav .fr .hover b {
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
