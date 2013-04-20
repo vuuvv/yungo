@@ -1,2 +1,33 @@
 <include file="public:shortcut" />
+<div id="o-header">
+	<div id="header" class="w">
+		<div class="ld" id="logo">
+			<a hidefocus="true" href="http://www.jd.com/"><b></b><img width="260" height="60" alt="京东商城" src="__STATIC__/images/yungo/logo.gif"></a>
+		</div>
+		<!--logo end-->
+		<div id="search">
+			<div class="i-search ld">
+				<ul class="hide" id="shelper"></ul>
+				<div class="form">
+					<input type="text" autocomplete="off" id="key" accesskey="s" class="text" style="color: rgb(153, 153, 153);"><input type="button" class="button" value="搜索">
+				</div>
+			</div>
+			<div id="hotwords"><strong>热门搜索：</strong><a style="color:#ff0000" target="_blank" href="http://search.jd.com/Search?keyword=iPhone5">iPhone5</a><a target="_blank" href="http://search.jd.com/Search?keyword=%C6%BD%B0%E5%B5%E7%C4%D4&amp;qr=&amp;qrst=UNEXPAND&amp;et=&amp;rt=1&amp;area=1&amp;cid3=2694&amp;ls=1">平板电脑</a><a target="_blank" href="http://search.jd.com/Search?keyword=%E5%90%8D%E9%9E%8B%E5%BA%93%E8%BF%90%E5%8A%A8%E4%B8%93%E8%90%A5%E5%BA%97%20%E8%80%90%E5%85%8B2013&amp;enc=utf-8">耐克上新</a><a target="_blank" href="http://search.jd.com/Search?keyword=%E5%8D%8E%E4%B8%BAmate&amp;enc=utf-8&amp;area=1">华为mate</a><a target="_blank" href="http://search.jd.com/search?keyword=%B4%B2%B5%E6&amp;qr=&amp;qrst=UNEXPAND&amp;et=&amp;rt=1&amp;area=1&amp;wtype=1">品质床垫</a><a target="_blank" href="http://search.jd.com/search?keyword=%B3%A4%BA%E7%BF%D5%B5%F7&amp;qr=&amp;qrst=UNEXPAND&amp;et=&amp;rt=1&amp;area=1&amp;ev=exbrand_%E9%95%BF%E8%99%B9%EF%BC%88CHANGHONG%EF%BC%89%40&amp;uc=0">长虹空调</a><a target="_blank" href="http://search.jd.com/Search?keyword=%E8%BE%9B%E5%A4%B7%E5%9D%9E&amp;enc=utf-8&amp;area=1">致青春</a></div>
+		</div>
+	</div>
+	<!--header end-->
+	<div class="w">
+		<div id="nav">
+			<ul id="navitems">
+				<li class="<if condition="$nav_curr eq 'index'">curr</if>"><a href="__ROOT__">{:L('index_page')}</a></li>
+				<pin:nav type="lists" style="main">
+				<volist name="data" id="val">
+				<li class="<if condition="$nav_curr eq $val['alias']">curr</if>"><a href="{$val.link}">{$val.name}</a></li>
+				</volist>
+				</pin:nav>
+			</ul>
+		</div>
+	</div>
+</div>
+
 

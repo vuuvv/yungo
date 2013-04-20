@@ -5,5 +5,16 @@
 </head>
 <body>
 <include file="public:header" />
+<div class="w category">
+	<div class="area">
+		<div class="cL">
+			<span>今日优惠(263)</span>
+			<a class="on" href="http://www.zhe800.com"><em>全部</em></a>
+			<volist name="index_cate_list" id="cate">
+			<a href="{:U('book/cate', array('cid'=>$cate['id']))}" title="{$cate.name}"><em>{$cate.name}</em></a>
+			</volist>
+		</div>
+	</div>
+</div>
 </body>
 </html>

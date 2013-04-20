@@ -84,6 +84,45 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   padding: 0;
 }
 
+.hide {
+    display: none;
+}
+
+.block {
+  display: block;
+  overflow: hidden;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.tab {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.tab li, .tab a, .tab-item {
+  float: left;
+  text-align: center;
+}
+
+.btn-img, .button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
 .fl {
   float: left;
 }
@@ -163,7 +202,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 body {
   font: 12px/150% Arial, Verdana, "\5b8b\4f53";
-  color: #666;
+  color: #333;
   background: #fff;
   _background-image: url(about:blank);
   _background-attachment: fixed;
@@ -182,7 +221,7 @@ h4, h5, h6 {
 }
 
 a:link, a:visited {
-  color: #666;
+  color: #333;
   text-decoration: none;
 }
 
@@ -196,7 +235,7 @@ a:active {
 }
 
 .w {
-    width: 990px;
+    width: 980px;
     margin: 0 auto;
 }
 
@@ -307,3 +346,196 @@ a:active {
   transform: rotate(180deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
+
+#biz-service.hover .dd {
+  left: 5px;
+  width: 73px;
+}
+
+#biz-service.hover .dd div {
+  padding-left: 6px;
+  line-height: 22px;
+}
+
+#site-nav .dd {
+  left: -164px;
+  width: 242px;
+}
+
+#site-nav .dd dl {
+  width: 70px;
+}
+
+#site-nav .dd .fore2 {
+  width: 80px;
+}
+
+#site-nav .dd .fore3 {
+  width: 90px;
+}
+
+#site-nav .dd dt {
+  padding: 4px 0 4px 9px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+#site-nav .dd dd {
+  padding-left: 9px;
+  line-height: 22px;
+}
+
+/*header*/
+#header {
+  height: 60px;
+  padding: 15px 0;
+}
+/*logo*/
+#logo {
+  float: left;
+  width: 330px;
+}
+#logo a:link b,
+#logo a:visited b {
+  top: 10px;
+  left: 245px;
+  width: 75px;
+  height: 38px;
+  cursor: pointer;
+}
+#logo a:hover b,
+#logo a:active b {
+  background: url(http://misc.360buyimg.com/lib/skin/2012/i/20111221C.png) #ffffff no-repeat -5px -470px;
+}
+/*logo*/
+.root61 #logo {
+  width: 350px;
+}
+/*search*/
+#search {
+  float: left;
+  width: 510px;
+  padding: 4px 126px 0 0;
+}
+#search input {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  border: none;
+}
+#search .i-search {
+  z-index: 11;
+  width: 494px;
+  height: 30px;
+  margin-bottom: 3px;
+  border: 3px solid #E4393C;
+}
+#search .form {
+  height: 30px;
+  overflow: hidden;
+}
+#search .text {
+  width: 406px;
+  height: 20px;
+  padding: 5px;
+  background-position: 0 -360px;
+  background-color: #fff;
+  background-repeat: repeat-x;
+  line-height: 20px;
+  color: #999;
+  font-family: arial, "\5b8b\4f53";
+  font-size: 14px;
+}
+#search .button {
+  position: absolute;
+  width: 78px;
+  background: #E4393C;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+#search #shelper {
+  overflow: hidden;
+  position: absolute;
+  top: 32px;
+  left: -3px;
+  width: 308px;
+  border: 1px solid #E4393C;
+  background: #fff;
+  -moz-box-shadow: 0 0 5px #999;
+  -webkit-box-shadow: 0 0 5px #999;
+  box-shadow: 0 0 5px #999;
+}
+#search #shelper li.close:hover {
+  background: none;
+}
+#search .text:focus {
+  background-color: #fcfcfc;
+  -webkit-box-shadow: 2px 2px 3px #d2d2d2 inset;
+  -moz-box-shadow: 2px 2px 3px #d2d2d2 inset;
+  box-shadow: 2px 2px 3px #d2d2d2 inset;
+}
+
+#hotwords {
+  height: 18px;
+  color: #999;
+  overflow: hidden;
+}
+#hotwords span,
+#hotwords strong {
+  float: left;
+  font-weight: normal;
+}
+#hotwords a:link,
+#hotwords a:visited {
+  float: left;
+  margin-right: 10px;
+  color: #999;
+}
+#hotwords a:hover,
+#hotwords a:active {
+  color: #E4393C;
+}
+
+/*nav*/
+#nav {
+  position: relative;
+  z-index: 6;
+  height: 40px;
+  margin-bottom: 10px;
+  background: #E4393C;
+}
+#navitems {
+  background: -moz-linear-gradient(top, #e64346, #e13335);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#e64346), to(#e13335));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#E64346", endColorstr="#E13335");
+  /* IE6,IE7 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=" #e64346 ", endColorstr=" #e13335 ")";
+  /* IE8 */
+}
+#navitems, #navitems li, #navitems li a {
+  height: 40px;
+}
+#navitems li {
+  float: left;
+  position: relative;
+  width: 83px;
+}
+#navitems li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85px;
+  text-align: center;
+  color: #fff;
+  font: bold 15px/40px "microsoft yahei";
+  text-decoration: none;
+}
+#navitems .curr, #navitems .hover {
+  z-index: 1;
+}
+#navitems .curr a, #navitems .hover a, #navitems a:hover {
+  background: #A40000;
+}
+
