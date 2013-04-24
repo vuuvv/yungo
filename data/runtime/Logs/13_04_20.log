@@ -4773,3 +4773,1877 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:-0.065570s ]
 INFO: [ view_end ] --END-- [ RunTime:0.000869s ]
 
+[ 2013-04-20T20:49:28+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.023584s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462168 [ RunTime:0.000236s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000242s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.009697s ]
+INFO: Run load_lang Behavior [ RunTime:-0.047591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.049306s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.029438s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000796s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000332s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.086621s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000830s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.090572s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003112s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.091064s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003615s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.091565s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.004115s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.091565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024301s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.111816s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.112269s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.112701s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.113018s ]
+INFO: Run content_replace Behavior [ RunTime:-0.113507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002132s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.113996s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2013-04-20T20:50:09+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001438s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462209 [ RunTime:0.000099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000110s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012415s ]
+NOTIC: [8] Undefined index: admin E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.027995s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.044284s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001028s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.045294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007360s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.052687s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.053098s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.053490s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.053806s ]
+INFO: Run content_replace Behavior [ RunTime:-0.054327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002430s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.055178s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2013-04-20T20:50:09+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=verify_code&t=1366462209
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001721s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462209 [ RunTime:0.000157s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000203s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.023915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026824s ]
+NOTIC: [8] Undefined index: admin E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001659s ]
+
+[ 2013-04-20T20:50:18+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001594s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462218 [ RunTime:0.000150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000185s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000067s ]
+INFO: Run load_lang Behavior [ RunTime:-0.024001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026750s ]
+NOTIC: [8] Undefined index: admin E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001539s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.031616s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000885s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.032560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006905s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.039468s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.039861s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.040248s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.040563s ]
+INFO: Run content_replace Behavior [ RunTime:-0.041011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001938s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.041449s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2013-04-20T20:50:18+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=verify_code&t=1366462218
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001514s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462218 [ RunTime:0.000124s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000132s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000030s ]
+INFO: Run load_lang Behavior [ RunTime:-0.013202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015503s ]
+NOTIC: [8] Undefined index: admin E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001733s ]
+
+[ 2013-04-20T20:50:23+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001595s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462222 [ RunTime:0.000125s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000132s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000028s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013631s ]
+NOTIC: [8] Undefined index: admin E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 236 行.
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001642s ]
+SQL: SHOW COLUMNS FROM `pin_admin` [ RunTime:0.030777s ]
+SQL: SELECT * FROM `pin_admin` WHERE ( `username` = 'admin' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: UPDATE `pin_admin` SET `last_time`=1366462223,`last_ip`='127.0.0.1' WHERE ( `id` = 1 ) [ RunTime:0.000288s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.050661s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000988s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.051682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006942s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.058663s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.059130s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.059525s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.059842s ]
+INFO: Run content_replace Behavior [ RunTime:-0.060294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002012s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.060714s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2013-04-20T20:50:24+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001991s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462224 [ RunTime:0.000451s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000182s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000030s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013748s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001835s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001421s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 0 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.055763s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.076695s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000974s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.077702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010541s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.088278s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.088756s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.089264s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.089589s ]
+INFO: Run content_replace Behavior [ RunTime:-0.090042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002203s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.090530s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2013-04-20T20:50:24+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=panel
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001460s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462224 [ RunTime:0.000104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000111s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000026s ]
+INFO: Run load_lang Behavior [ RunTime:-0.022351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024635s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001584s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.031533s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000847s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.034487s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002108s ]
+NOTIC: [8] Undefined variable: sub_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\ba3d2a4c7110487814df26e78e828b96.php 第 21 行.
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\ba3d2a4c7110487814df26e78e828b96.php 第 21 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.034487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012807s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.045260s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.045772s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046170s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046488s ]
+INFO: Run content_replace Behavior [ RunTime:-0.046936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002079s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.047382s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2013-04-20T20:50:24+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001528s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462224 [ RunTime:0.000107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000133s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000025s ]
+INFO: Run load_lang Behavior [ RunTime:-0.009878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012092s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001625s ]
+SQL: SELECT * FROM `pin_menu` WHERE ( `often` = 1 )  [ RunTime:0.000237s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.017399s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000813s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: data E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\8bbf59c365bdf6267b9eb5e67d22693d.php 第 3 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.018242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.026274s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.026665s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.027051s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027361s ]
+INFO: Run content_replace Behavior [ RunTime:-0.027808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001921s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028236s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2013-04-20T20:50:27+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001691s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462227 [ RunTime:0.000118s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000117s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000025s ]
+INFO: Run load_lang Behavior [ RunTime:-0.022686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025226s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001633s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001399s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 1 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000282s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 1 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000262s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 2 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000277s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 216 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000252s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 60 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000247s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.034313s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000965s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.035316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009749s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.045096s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.045505s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.045907s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046232s ]
+INFO: Run content_replace Behavior [ RunTime:-0.046691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001994s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.047134s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2013-04-20T20:50:30+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=setting&a=index&menuid=148
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001511s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462230 [ RunTime:0.000115s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000140s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.013283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015662s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001517s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001463s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 148 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000280s ]
+NOTIC: [2] strpos(): Empty needle E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 21 行.
+NOTIC: [2048] Declaration of settingModel::_before_write() should be compatible with Model::_before_write(&$data) E:\php\nginx-1.1.7\html\yungo\app\Lib\Model\settingModel.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `pin_setting` [ RunTime:0.037248s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.060228s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.063706s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002467s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.064523s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003294s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.064523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012721s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.074042s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.074557s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.074959s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.075283s ]
+INFO: Run content_replace Behavior [ RunTime:-0.075739s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002132s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.076199s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2013-04-20T20:51:10+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001804s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462270 [ RunTime:0.000139s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000161s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013066s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001657s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001541s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 244 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000448s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 244 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000260s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 245 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000260s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021511s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000943s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.022485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008363s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.030876s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.031237s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031598s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031889s ]
+INFO: Run content_replace Behavior [ RunTime:-0.032303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001789s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.032703s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000521s ]
+
+[ 2013-04-20T20:51:11+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001531s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462271 [ RunTime:0.000165s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000124s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000024s ]
+INFO: Run load_lang Behavior [ RunTime:-0.016343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018992s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001706s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001520s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 29 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000361s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 29 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000256s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 254 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000259s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 31 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000269s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.027982s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001041s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.029072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007831s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.036923s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.037270s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.037620s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.037901s ]
+INFO: Run content_replace Behavior [ RunTime:-0.038300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001766s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.038728s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2013-04-20T20:51:12+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001577s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462272 [ RunTime:0.000162s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000170s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000026s ]
+INFO: Run load_lang Behavior [ RunTime:-0.023650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026124s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001713s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001407s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 10 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000277s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 10 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000241s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 154 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000233s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 11 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000268s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 14 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000276s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.035473s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001103s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.036612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008286s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.044921s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.045335s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.045760s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.046080s ]
+INFO: Run content_replace Behavior [ RunTime:-0.046534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.046967s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-04-20T20:51:13+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=article&a=index&menuid=155
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001818s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462273 [ RunTime:0.000184s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000165s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.017479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019789s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001756s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001407s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 155 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000286s ]
+NOTIC: [2] strpos(): Empty needle E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `pin_article` [ RunTime:0.045936s ]
+SQL: SHOW COLUMNS FROM `pin_article_cate` [ RunTime:0.009153s ]
+SQL: SELECT `id`,`name` FROM `pin_article_cate`  [ RunTime:0.000207s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_article` LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT * FROM `pin_article` ORDER BY ordid ASC LIMIT 0,20   [ RunTime:0.000198s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.086711s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000838s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.090223s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002661s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.091036s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003484s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.091036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015918s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.103534s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.103995s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.104385s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.104699s ]
+INFO: Run content_replace Behavior [ RunTime:-0.105144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002013s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.105593s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2013-04-20T20:51:15+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001517s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462275 [ RunTime:0.000207s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000361s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000025s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013179s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001702s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001376s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 50 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000290s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 50 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000252s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 51 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000375s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 164 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000323s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021939s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000949s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.022926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008241s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031191s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.031552s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031911s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.032201s ]
+INFO: Run content_replace Behavior [ RunTime:-0.032623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001799s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.033030s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2013-04-20T20:51:16+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=item&a=index&menuid=52
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001631s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462275 [ RunTime:0.000145s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000136s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000036s ]
+INFO: Run load_lang Behavior [ RunTime:-0.021282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023841s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001712s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001450s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 52 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000267s ]
+NOTIC: [2] strpos(): Empty needle E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001860s ]
+SQL: SHOW COLUMNS FROM `pin_item_cate` [ RunTime:0.057343s ]
+SQL: SELECT `id`,`name` FROM `pin_item_cate`  [ RunTime:0.006088s ]
+NOTIC: [8] Undefined index: status E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\itemAction.class.php 第 48 行.
+NOTIC: [8] Undefined variable: spid E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\itemAction.class.php 第 64 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` LIMIT 1   [ RunTime:0.000215s ]
+SQL: SELECT * FROM `pin_item` ORDER BY ordid ASC, add_time DESC LIMIT 0,20   [ RunTime:0.000664s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.102789s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000882s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.105891s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002220s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.106629s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002955s ]
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.106629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020506s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.124242s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.124936s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.125353s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.125701s ]
+INFO: Run content_replace Behavior [ RunTime:-0.126176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002366s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.126694s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2013-04-20T20:51:22+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=item_comment&a=index&menuid=186
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001651s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462282 [ RunTime:0.000137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000134s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000028s ]
+INFO: Run load_lang Behavior [ RunTime:-0.015829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018143s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001599s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001446s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 186 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000263s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_item_comment` [ RunTime:0.030234s ]
+NOTIC: [8] Use of undefined constant DB_PREFIX - assumed 'DB_PREFIX' E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\item_commentAction.class.php 第 10 行.
+SQL: SELECT COUNT(pin_item_comment.id) AS tp_count FROM `pin_item_comment` LEFT JOIN pin_user ON pin_user.id=pin_item_comment.uid LEFT JOIN pin_item ON pin_item.id=pin_item_comment.item_id WHERE 1=1 LIMIT 1   [ RunTime:0.040047s ]
+SQL: SELECT pin_item_comment.*,pin_user.username,pin_item.title as item_name,pin_item.img FROM `pin_item_comment` LEFT JOIN pin_user ON pin_user.id=pin_item_comment.uid LEFT JOIN pin_item ON pin_item.id=pin_item_comment.item_id WHERE 1=1 ORDER BY pin_item_comment.id DESC LIMIT 0,20   [ RunTime:0.000326s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.097163s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000973s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.100533s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002388s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.101268s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003129s ]
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\b5496ca8d4ba5dd2b3b1e41fa171a601.php 第 21 行.
+NOTIC: [8] Undefined index: keyword E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\b5496ca8d4ba5dd2b3b1e41fa171a601.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.101268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013020s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.111217s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.111656s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.112047s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.112360s ]
+INFO: Run content_replace Behavior [ RunTime:-0.112808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001989s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.113253s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2013-04-20T20:51:23+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=item_orig&a=index&menuid=199
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001526s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462283 [ RunTime:0.000105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000109s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012422s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001612s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001387s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 199 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000261s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_item_orig` [ RunTime:0.018110s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item_orig` LIMIT 1   [ RunTime:0.000271s ]
+SQL: SELECT * FROM `pin_item_orig` ORDER BY ordid ASC LIMIT 0,20   [ RunTime:0.000355s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.040119s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000916s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.043194s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002158s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.043898s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002861s ]
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\696da9332a3b772fac3e1760829669f5.php 第 49 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\696da9332a3b772fac3e1760829669f5.php 第 50 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\696da9332a3b772fac3e1760829669f5.php 第 51 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\696da9332a3b772fac3e1760829669f5.php 第 49 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\696da9332a3b772fac3e1760829669f5.php 第 50 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\696da9332a3b772fac3e1760829669f5.php 第 51 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.043898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013403s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.054506s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.054979s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.055379s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.055696s ]
+INFO: Run content_replace Behavior [ RunTime:-0.056145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002045s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.056597s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2013-04-20T20:51:24+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=item_cate&a=index&menuid=56
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001781s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462284 [ RunTime:0.000211s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000167s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.024088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026492s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001656s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001430s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 56 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000283s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_item_cate` [ RunTime:0.001827s ]
+SQL: SELECT * FROM `pin_item_cate` ORDER BY ordid ASC  [ RunTime:0.002755s ]
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+NOTIC: [8] Undefined variable: parentid E:\php\nginx-1.1.7\html\yungo\app\Lib\ORG\Tree.class.php 第 121 行.
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.167805s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000939s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.170945s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002201s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.171655s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002911s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.171655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012129s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.181132s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.187098s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.188247s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.188585s ]
+INFO: Run content_replace Behavior [ RunTime:-0.190833s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012432s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.193790s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000811s ]
+
+[ 2013-04-20T20:51:25+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=collect_alimama&a=index&menuid=192
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001576s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462285 [ RunTime:0.000119s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000130s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000031s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012671s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001719s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001483s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 192 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000271s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_item_site` [ RunTime:0.021135s ]
+SQL: SELECT `config` FROM `pin_item_site` WHERE ( `code` = 'taobao' ) LIMIT 1   [ RunTime:0.000226s ]
+NOTIC: [8] Undefined index: item_cat E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\collect_alimamaAction.class.php 第 304 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\collect_alimamaAction.class.php 第 304 行.
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.217405s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001053s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.220923s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002465s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.221676s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003215s ]
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\96e975859ab72dacc8c9cd8906ece276.php 第 21 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.221676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017222s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.235748s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.236224s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.236623s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.236935s ]
+INFO: Run content_replace Behavior [ RunTime:-0.237389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002053s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.237874s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2013-04-20T20:51:26+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=collect_batch&a=index&menuid=268
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001652s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462286 [ RunTime:0.000158s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000148s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000027s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014333s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001828s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001670s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 268 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000337s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_auto_user` [ RunTime:0.016094s ]
+SQL: SELECT * FROM `pin_auto_user`  [ RunTime:0.000255s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.038521s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000953s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.041698s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002221s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.042419s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002943s ]
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\a2256bd997b603475fd67ea3728a1a98.php 第 21 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.042419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011638s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.051176s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.051609s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.051998s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.052310s ]
+INFO: Run content_replace Behavior [ RunTime:-0.052756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001976s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.053223s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2013-04-20T20:51:28+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=cmt_taobao&a=index&menuid=281
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001547s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462288 [ RunTime:0.000111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000112s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000037s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013063s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001499s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001399s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 281 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000261s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_auto_user` [ RunTime:0.001287s ]
+SQL: SELECT * FROM `pin_auto_user`  [ RunTime:0.000165s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021632s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000864s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.024682s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002181s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025408s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002911s ]
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\cb2996175a7f24c19b1a9e0feacbc9d5.php 第 21 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.025408s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012991s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.035551s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.035989s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.036376s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.036687s ]
+INFO: Run content_replace Behavior [ RunTime:-0.037131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001996s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.037622s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2013-04-20T20:51:39+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001496s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462299 [ RunTime:0.000106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000111s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000062s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013494s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001698s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001456s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 285 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000250s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 285 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000235s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 172 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000246s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.022153s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000949s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.023134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008134s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031296s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.031671s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.032056s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.032363s ]
+INFO: Run content_replace Behavior [ RunTime:-0.032804s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001948s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.033280s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
+[ 2013-04-20T20:51:39+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000350s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001483s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462299 [ RunTime:0.000118s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000130s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000022s ]
+INFO: Run load_lang Behavior [ RunTime:-0.009766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011887s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001591s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001589s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 70 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000316s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 70 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000285s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 117 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000275s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 232 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000231s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 256 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000282s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.020864s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001334s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.022235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008301s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.030563s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.030949s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031333s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031643s ]
+INFO: Run content_replace Behavior [ RunTime:-0.032132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001957s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.032564s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2013-04-20T20:51:40+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=auto_user&a=index&menuid=255
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000422s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001841s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462300 [ RunTime:0.000207s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000159s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000028s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013953s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001685s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001574s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 255 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000287s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_auto_user` [ RunTime:0.001340s ]
+SQL: SHOW COLUMNS FROM `pin_auto_user` [ RunTime:0.002011s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_auto_user` LIMIT 1   [ RunTime:0.000160s ]
+SQL: SELECT * FROM `pin_auto_user` ORDER BY id DESC LIMIT 0,20   [ RunTime:0.000165s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.027006s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000913s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.030146s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002226s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.030827s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002907s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.030827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013313s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.041304s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.041771s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.042183s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.042509s ]
+INFO: Run content_replace Behavior [ RunTime:-0.042966s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002068s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.043421s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2013-04-20T20:52:28+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001495s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462348 [ RunTime:0.000098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000109s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000025s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012496s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001679s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 285 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000327s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 285 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000281s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 172 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000289s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.020904s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001257s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.022217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008579s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.030825s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.031181s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.031563s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.031872s ]
+INFO: Run content_replace Behavior [ RunTime:-0.032327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001912s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.032779s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2013-04-20T20:52:29+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001538s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462349 [ RunTime:0.000120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000118s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000024s ]
+INFO: Run load_lang Behavior [ RunTime:-0.024803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027307s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001801s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001649s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 50 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000284s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 50 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000241s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 51 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000262s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 164 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000265s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.036196s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000908s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.037139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008818s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.045987s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.046422s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.046809s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.047117s ]
+INFO: Run content_replace Behavior [ RunTime:-0.047661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002109s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.048147s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2013-04-20T20:52:31+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=item&a=index&menuid=52
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001511s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462351 [ RunTime:0.000120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000121s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000075s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013277s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001408s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 52 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000281s ]
+NOTIC: [2] strpos(): Empty needle E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 21 行.
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001812s ]
+SQL: SHOW COLUMNS FROM `pin_item_cate` [ RunTime:0.001561s ]
+SQL: SELECT `id`,`name` FROM `pin_item_cate`  [ RunTime:0.000735s ]
+NOTIC: [8] Undefined index: status E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\itemAction.class.php 第 48 行.
+NOTIC: [8] Undefined variable: spid E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\itemAction.class.php 第 64 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` LIMIT 1   [ RunTime:0.000387s ]
+SQL: SELECT * FROM `pin_item` ORDER BY ordid ASC, add_time DESC LIMIT 0,20   [ RunTime:0.000681s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.030966s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000815s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.033934s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002155s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.034614s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002800s ]
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+NOTIC: [8] Undefined index: colors E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\6090765389774d6a15ddce11022e141b.php 第 122 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.034614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020312s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.052157s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.052851s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.053241s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.053539s ]
+INFO: Run content_replace Behavior [ RunTime:-0.053995s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002284s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.054489s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2013-04-20T20:52:32+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=item&a=delete_search&menuid=250
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001562s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462351 [ RunTime:0.000123s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000131s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000056s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012667s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001496s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001442s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 250 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000319s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.002594s ]
+SQL: SHOW COLUMNS FROM `pin_item_cate` [ RunTime:0.002104s ]
+SQL: SHOW COLUMNS FROM `pin_item_like` [ RunTime:0.076711s ]
+SQL: SHOW COLUMNS FROM `pin_item_img` [ RunTime:0.022320s ]
+SQL: SHOW COLUMNS FROM `pin_item_tag` [ RunTime:0.014038s ]
+SQL: SHOW COLUMNS FROM `pin_item_comment` [ RunTime:0.001398s ]
+SQL: SELECT `id`,`name` FROM `pin_item_cate`  [ RunTime:0.000794s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.145687s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001229s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.149389s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002462s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.150074s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003161s ]
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 21 行.
+NOTIC: [8] Undefined variable: time_start E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 43 行.
+NOTIC: [8] Undefined variable: time_end E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 45 行.
+NOTIC: [8] Undefined variable: keyword E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 67 行.
+NOTIC: [8] Undefined variable: min_price E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 73 行.
+NOTIC: [8] Undefined variable: max_price E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 73 行.
+NOTIC: [8] Undefined variable: min_rates E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 79 行.
+NOTIC: [8] Undefined variable: max_rates E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\c2915b1b3522abb0df9a675f22bf4a02.php 第 79 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.150074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012012s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.159009s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.159499s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.159939s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.160310s ]
+INFO: Run content_replace Behavior [ RunTime:-0.160824s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002334s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.161395s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2013-04-20T20:52:32+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=item&a=check&menuid=203
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000416s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001508s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462352 [ RunTime:0.000125s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000115s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000028s ]
+INFO: Run load_lang Behavior [ RunTime:-0.015686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017830s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001702s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001499s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 203 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000240s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001917s ]
+SQL: SHOW COLUMNS FROM `pin_item_cate` [ RunTime:0.002366s ]
+SQL: SELECT `id`,`name` FROM `pin_item_cate`  [ RunTime:0.000763s ]
+NOTIC: [8] Undefined variable: spid E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\itemAction.class.php 第 358 行.
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 0 ) LIMIT 1   [ RunTime:0.000202s ]
+SQL: SELECT `id`,`title`,`img`,`tag_cache`,`cate_id`,`uid`,`uname` FROM `pin_item` WHERE ( `status` = 0 ) ORDER BY id DESC LIMIT 0,20   [ RunTime:0.000350s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\itemAction.class.php 第 370 行.
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.035453s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000851s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.038531s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002224s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.039220s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002914s ]
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\b7057fc03d5dfada0caf5e6db9851f22.php 第 21 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.039220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013764s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.050138s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.050594s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.050953s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.051257s ]
+INFO: Run content_replace Behavior [ RunTime:-0.051663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001891s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.052104s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2013-04-20T20:52:34+08:00 ] 127.0.0.1 /yungo/index.php?g=admin&m=collect_alimama&a=index&menuid=192
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001484s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366462354 [ RunTime:0.000100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000109s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000026s ]
+INFO: Run load_lang Behavior [ RunTime:-0.009655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011807s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001541s ]
+SQL: SHOW COLUMNS FROM `pin_menu` [ RunTime:0.001390s ]
+SQL: SELECT * FROM `pin_menu` WHERE (  ( `pid` = 192 ) ) AND ( `display` = 1 ) ORDER BY ordid  [ RunTime:0.000294s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\backendAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `pin_item_site` [ RunTime:0.001468s ]
+SQL: SELECT `config` FROM `pin_item_site` WHERE ( `code` = 'taobao' ) LIMIT 1   [ RunTime:0.000137s ]
+NOTIC: [8] Undefined index: item_cat E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\collect_alimamaAction.class.php 第 304 行.
+NOTIC: [2] Invalid argument supplied for foreach() E:\php\nginx-1.1.7\html\yungo\app\Lib\Action\admin\collect_alimamaAction.class.php 第 304 行.
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.130631s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000920s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.133799s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002284s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.134494s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002980s ]
+NOTIC: [8] Undefined variable: big_menu E:\php\nginx-1.1.7\html\yungo\data\runtime\Cache\admin\96e975859ab72dacc8c9cd8906ece276.php 第 21 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.134494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017286s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.148861s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.149346s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.149746s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.150062s ]
+INFO: Run content_replace Behavior [ RunTime:-0.150516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002065s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.150986s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2013-04-20T22:33:54+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001858s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366468434 [ RunTime:0.000107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000120s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000030s ]
+INFO: Run load_lang Behavior [ RunTime:-0.012521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014175s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001990s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000334s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.022428s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000969s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025678s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002301s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.026150s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002773s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.026662s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003286s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.026662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015318s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.038765s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.039323s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.039715s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.040026s ]
+INFO: Run content_replace Behavior [ RunTime:-0.040475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002197s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.041009s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2013-04-20T22:38:35+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001835s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366468715 [ RunTime:0.000135s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000200s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000034s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013737s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.002267s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000351s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.022843s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000895s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.026147s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002409s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.026652s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002894s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.027158s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003422s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.027158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012514s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.036312s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.036746s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.037136s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.037444s ]
+INFO: Run content_replace Behavior [ RunTime:-0.037889s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001997s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.038362s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2013-04-20T22:40:19+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001549s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366468819 [ RunTime:0.000108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000117s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000034s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011846s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001994s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000363s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.019421s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000685s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.022387s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002281s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.022811s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002702s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.023319s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003214s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.023319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012203s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.032416s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.032878s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.033357s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.033710s ]
+INFO: Run content_replace Behavior [ RunTime:-0.034219s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002380s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.034834s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2013-04-20T22:41:58+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001556s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366468918 [ RunTime:0.000108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000117s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000030s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012733s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.002486s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000226s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000337s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021524s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001007s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025026s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002517s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025592s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003082s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.026087s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003578s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.026087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012787s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.035391s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.035836s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.036225s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.036536s ]
+INFO: Run content_replace Behavior [ RunTime:-0.036981s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002012s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.037439s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2013-04-20T22:43:53+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001744s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366469033 [ RunTime:0.000133s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000120s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000031s ]
+INFO: Run load_lang Behavior [ RunTime:-0.010693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012071s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.002005s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000384s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.019311s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000690s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.022133s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002131s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.022649s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002648s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.023145s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003145s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.023145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011747s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031810s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.032229s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.032619s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.032927s ]
+INFO: Run content_replace Behavior [ RunTime:-0.033348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001941s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.033798s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000559s ]
+
+[ 2013-04-20T22:45:19+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001534s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366469118 [ RunTime:0.000129s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000139s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000051s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013152s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.002069s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000338s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021068s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000965s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.024546s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002514s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025175s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003143s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025760s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003728s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.025760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012867s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.034959s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.035421s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.035810s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.036118s ]
+INFO: Run content_replace Behavior [ RunTime:-0.036564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002116s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.037159s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2013-04-20T22:46:34+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001522s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366469194 [ RunTime:0.000200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000342s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000032s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012897s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001988s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000334s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000456s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021017s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.024252s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002439s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.024941s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003083s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025593s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003780s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.025593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013353s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.035228s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.035740s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.036290s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.036623s ]
+INFO: Run content_replace Behavior [ RunTime:-0.037062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002567s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.037901s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2013-04-20T22:48:06+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000547s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001549s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366469286 [ RunTime:0.000107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000116s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000034s ]
+INFO: Run load_lang Behavior [ RunTime:-0.011538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013254s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001941s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000340s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.020831s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000953s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.024370s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002589s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025056s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003272s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025725s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003947s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.025725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012905s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.034759s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.035487s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.036156s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.036570s ]
+INFO: Run content_replace Behavior [ RunTime:-0.037028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002795s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.037636s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2013-04-20T23:00:27+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001611s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366470027 [ RunTime:0.000109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000118s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000053s ]
+INFO: Run load_lang Behavior [ RunTime:-0.012163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013986s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.001860s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000189s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000309s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.021353s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000978s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.025274s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002915s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.026523s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.004191s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.027544s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.005164s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.027544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034433s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.056837s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.057692s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.058137s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.058451s ]
+INFO: Run content_replace Behavior [ RunTime:-0.059006s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002727s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.059728s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2013-04-20T23:01:47+08:00 ] 127.0.0.1 /yungo/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `pin_ipban` [ RunTime:0.001706s ]
+SQL: DELETE FROM `pin_ipban` WHERE expires_time <> 0 AND expires_time < 1366470107 [ RunTime:0.000170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `pin_ipban` WHERE ( `type` = 'ip' ) AND ( `name` = '127.0.0.1' ) LIMIT 1   [ RunTime:0.000168s ]
+INFO: Run check_ipban Behavior [ RunTime:-0.000048s ]
+INFO: Run load_lang Behavior [ RunTime:-0.025587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027109s ]
+SQL: SHOW COLUMNS FROM `pin_item` [ RunTime:0.002184s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `pin_item` WHERE ( `status` = 1 ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: SELECT `id`,`uid`,`uname`,`title`,`intro`,`img`,`price`,`likes`,`comments`,`comments_cache` FROM `pin_item` WHERE ( `status` = 1 ) ORDER BY hits DESC,id DESC LIMIT 0,10   [ RunTime:0.000408s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.035230s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000928s ]
+INFO: [ view_parse ] --START--
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.038892s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.002754s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.039884s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.003749s ]
+INFO: [ view_template ] --START--
+INFO: Run basic_template Behavior [ RunTime:-0.040634s ]
+INFO: [ view_template ] --END-- [ RunTime:-0.004494s ]
+INFO: Run ParseTemplate Behavior [ RunTime:-0.040634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032845s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.069053s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.069875s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.070312s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.070628s ]
+INFO: Run content_replace Behavior [ RunTime:-0.071140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002640s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.071761s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000564s ]
+
