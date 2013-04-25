@@ -1,21 +1,28 @@
 /* for hotel city begin */
+body {
+	background: #f8f8f8;
+}
+#o-header {
+	background: #fff;
+}
+/* for hotel city begin */
 .menu_w{ width:966px; height:auto; float:left; padding-left:20px;}
-.menu_bod{  border-top:1px solid #fff; background:#fef5e5;}
+.menu_bod{  border-top:1px solid #fff; background:#f7f7f7;}
 
-.menu_hotel{ width:986px; height:auto; border-right:1px solid #fe6902; border-left:1px solid #fe6902; border-bottom:1px solid #fe6902; border-top:3px solid #fe6902;  margin:0 auto; padding:0px 0px 2px px; background:#fff;}
+.menu_hotel{ width:988px; height:auto; border:1px solid #dddddd;  margin:0 auto; padding:0px 0px 2px px; background:#fff;}
 .menu_left_hotel, .menu_right_hotel{ float:left; padding:9px 0px  6px 0px;}
 .menu_right_hotel{ width:880px; line-height:20px;  position:relative;  }
 #citymenu1{ z-index:2;}
-.haveb{ border-bottom:1px dotted #cdcdcd;}
+.haveb{ border-bottom:1px dotted #ccc;}
 .menu_right_hotel ul{ list-style:none; padding:0px; margin:0px; float:left; width:600px;  }
 .menu_right_hotel ul li{    cursor: pointer;display: inline;float: left;height: 23px; line-height:23px; padding:0px 20px 0px 5px; white-space: nowrap; position:relative;}
-.menu_right_hotel ul li a, .menu_right_hotel ul li a:hover{   display: block; float: left; line-height: 17px; padding:1px 4px;  white-space: nowrap; color:#333;}
+.menu_right_hotel ul li a, .menu_right_hotel ul li a:hover{   display: block; float: left; line-height: 17px; padding:1px 4px;  white-space: nowrap; color:#005ea6;}
 
  .menu_right_hotel ul li a.onon, .menu_right_hotel ul li a:hover.onon{    color:red;}
 .menu_right_hotel ul li a.onon span, .menu_right_hotel ul li a:hover.onon span{ color:red;}
 .menu_right_hotel ul li a span, .menu_right_hotel ul li a:hover span{ color:#9a9a9a;}
 .menu_right_hotel span.other{  display: block;  line-height: 17px;  white-space: nowrap; cursor:pointer; position:absolute; top:30px; right:200px;  }
-.menu_right_hotel  a.on, .menu_right_hotel a.on:hover{  height:17px;  padding:0px 6px 1px 6px; text-align:center; background:#fe6a00; color:#fff; font-weight:normal; float:left;}
+.menu_right_hotel  a.on, .menu_right_hotel a.on:hover{  height:17px;  padding:0px 6px 1px 6px; text-align:center; background:#4698d4; color:#fff; font-weight:normal; float:left;}
 .menu_left_hotel, .menu_left_hotel a, .menu_left_hotel a:hover{  font-weight:bold;  float:left; width:66px; text-align:right; text-decoration:none;}
 .menu_right_hotel ul.b1, .menu_right_hotel ul.b2{ list-style:none; padding:0px; margin:0px; float:left; width:840px;  }
 .menu_right_hotel ul.b2{ width:790px;}
@@ -30,18 +37,18 @@
 .menu_w .newtuan{width:100px; height:22px; float:left;margin:8px 0px 8px 30px;  line-height:22px; background:url(i/tuan6.bg.png) -306px -385px no-repeat;  cursor:pointer; position:relative;}
 .menu_w .jifen{ width:100px; height:22px; float:left;margin:8px 0px 8px 10px;  line-height:22px; color:#cc0000; font-weight:bold; position:relative;}
 .menu_w .jifen a{color:#cc0000; text-decoration:none;}
-.menu_w .newtuan a, .menu_w .newtuan a:hover{ text-decoration:none; color:#333; height:22px; padding-left:20px; display:block; font-weight:bold;}
+.menu_w .newtuan a, .menu_w .newtuan a:hover{ text-decoration:none; color:#333; height:22px; padding-left:20px; display:block; }
 .menu_w .non{background:url(i/tuan6.bg.png) -306px -413px no-repeat;}
-.tips{ width:848px; border:1px solid #ffc299; float:left; padding:4px 10px; background:#fffdee; height: auto; display:block; position:relative;}
+.tips{ width:848px; border:1px solid #ddd; float:left; padding:4px 10px; background:#fcfcfc; height: auto; display:block; position:relative;}
 .tips h1{ float:left; width:38px; font-size:12px; font-weight:normal; height:20px; line-height:20px; padding:0px;}
 .tips ul{ width:800px; float:left;}
 .tips ul li{    cursor: pointer;display: inline;float: left;height: 23px; line-height:23px; padding:0px 10px 0px 0px; white-space: nowrap; position:relative; }
-.tips ul li a, .menu_right_hotel ul li a:hover{   display: block; float: left; line-height: 17px; padding:1px 4px;  white-space: nowrap; color:#333;}
-.tips b{ width:7px; height:7px; display:block; position:absolute; top:12px; right:10px; background:url(i/tuan6.bg.png) -261px -331px no-repeat; cursor:pointer;}
+.tips ul li a, .menu_right_hotel ul li a:hover{   display: block; float: left; line-height: 17px; padding:1px 4px;  white-space: nowrap;}
+.tips b{ width:7px; height:7px; display:block; position:absolute; top:12px; right:10px;  cursor:pointer;}
 .menu_right_hotel ul li a:hover{ color:red;}
 .li_inp{ width:38px; height:18px; line-height:18px; border:1px solid #aaa; border-bottom-color:#ddd; border-right-color:#ddd;}
 .li_but{ width:50px; height:21px; line-height:21px; border:none; text-align:center; background:url(i/tuan6.bg.png) -230px -159px;}
-.hoverbb{ border-bottom:1px solid #ffe0cc;}
+.hoverbb{ border-bottom:1px solid #ddd;}
 #menu_city {background: none repeat scroll 0 0 #FFFDEE;border: 1px solid #c4c4c4;border-radius: 1px 1px 1px 1px;box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);position: absolute; left:60px; top:65px; width:670px; height:auto; z-index:9; background:#fff; display:none; }
 #menu_city .title{ width:670px; height:30px;background:url(i/tuan6.bg.png) 0px -490px; float:left; padding:21px 0px 16px 0px; }
 #menu_city .title .text{ height:30px; width:287px; line-height:30px; float:left; text-align:right; font-size:14px; font-weight:bold; padding-right:10px;}
@@ -64,15 +71,40 @@
 #menu_city .con .mc .team ul li a, #menu_city .con .mc .team ul li a:hover{   display: block; float: left; line-height: 17px; padding:1px 8px;  white-space: nowrap; color:#333;}
 #menu_city .con .mc .team ul li a:hover, #menu_city .con .mc .team ul li a:hover span{ background:#fd6a00; color:#fff; text-decoration:none;}
 /* for hotel city end */
+
+.w{ width:990px; height:auto;  margin:0 auto; }
+.yjfk{ position:absolute; bottom:-40px; left:890px; width:100px; height:28px; line-height:28px; text-align:center; background: url(i/yjfk_bg.gif); z-index:100;}
 .l{ width:990px; float:left; padding-top:10px; overflow:hidden;}
 .page{ width:990px; height:25px; padding:20px 0px 10px 0px; float:left; text-align:right; position:relative;}
 .l .page{ width:990px; height:25px; padding:0px 0px 10px 0px; float:left; text-align:right; position:relative;}
 .l .pro{ width:1005px; float:left; height:auto;z-index:1; overflow:hidden;}
 .l .adad{ width:1005px; float:left; height:auto;z-index:1; overflow:hidden;}
-.product{ width:278px; height:auto; background:#fff; margin:0px 15px 15px 0px; padding:15px 20px 20px 20px; border-width:1px; border-style:solid; border-color:#ffc198; -moz-border-radius:5px;-webkit-border-radius:5px; float:left;}
+
+.product {
+   width:278px;
+   height:auto;
+   background:#fff;
+   margin:0px 15px 15px 0px;
+   padding:15px 20px 20px 20px;
+   border-width:1px;
+   border-style:solid;
+   border-color:#ddd;
+   -moz-border-radius:5px;
+   -webkit-border-radius:5px;
+   float:left;
+}
+
 .product .title{ width:278px; height:40px; font-size:14px; font-weight: bold; font-family:"microsoft yahei"; line-height:20px; float:left; overflow:hidden; }
 .product .title span{ width:33px; padding:0px 4px; height:18px; line-height:18px; text-align:center; display:inline; -moz-border-radius:2px;-webkit-border-radius:2px; background:#cb0000; color:#fff;}
-.product .pic{ width:278px; height:185px;float:left; position:relative; padding-top:10px; z-index:1;}
+.product .pic{
+   width:210px;
+   padding: 0 34px;
+   height:210px;
+   float:left;
+   position:relative;
+   padding-top:10px;
+   z-index:1;
+}
 .product .pic .new_icon, .product .pic .prize_icon, .product .pic .hotmai_icon{ position:absolute; top:0px; right:-15px; background:url(i/tuan6.bg.png) 0px -683px;_background:url(i/new1.gif); width:50px; height:50px; z-index:2;}
 .product .pic .prize_icon{background:url(i/tuan6.bg.png) -50px -683px;_background:url(i/prize1.gif);  }
 .product .pic .hotmai_icon{background:url(i/tuan6.bg.png) -100px -683px;_background:url(i/hotmai1.gif); }
@@ -123,10 +155,10 @@
 .product1 .pic .t_icon_hwg{ background:url(i/ticon-1.png) 0px -324px;_background:url(i/ticon-1.gif) 0px -324px; }
 .product1 .pic .t_icon_jbdxy{ background:url(i/ticon-1.png) 0px -405px;_background:url(i/ticon-1.gif) 0px -405px; }
 .product1 .pic .t_icon_jddj{ background:url(i/ticon-1.png) 0px -486px;_background:url(i/ticon-1.gif) 0px -486px; }
-.hover1{ border-color:#FE6902;}
+.hover1{ border-color:#ddd;}
 .r{ width:230px; float:left; overflow:hidden;}
 .rm{ width:230px; height:auto; padding-top:10px; float:left; }
-.rm2{ width:230px; height:auto; padding:10px 0; float:left; }
+.rm2{ width:230px; height:auto;  float:left; }
 .rm .rmt,.rm2 .rmt{ width:218px; height:40px; background:url(i/tuan6.bg.png) 0px -159px #fbfbfb; padding-left:12px; font-size:14px; font-weight:bold; line-height:40px;}
 .rm .rmc,.rm2 .rmc{ width:208px; height:auto; border:1px solid #ffc299; border-top:none; background:#fff; padding:5px 10px 10px 10px;}
 #notice .rmc li{ width:208px; height:auto;}
@@ -158,20 +190,39 @@
 #sub .rmc .atte img{ padding-left:2px; cursor:pointer;}
 
 /*pagin*/
-.pagin {border-left: 1px solid #FFFFFF; float: right; height: 22px;padding:7px 10px 0px 0px;}
 .pagin a,.pagin span{float:left;height:21px;padding:1px 7px;border:1px solid #ccc;margin-left:2px;font-family:arial;line-height:21px;font-size:14px;overflow:hidden;-moz-border-radius:3px;-webkit-border-radius:3px; background:#fff;}
-.pagin .text{ border:none; background:none; padding: 4px;}
-.pagin .current{padding:1px 7px; background:#ff6600; color:#fff;}
+.pagin .text{ border:none; background:none;}
+.pagin .current{padding:1px 7px; background:#005aa0; color:#fff;}
 .pagin a:link,.pagin a:visited{color:#333;}
-.pagin a:hover,.pagin a:active{background:#ff6600;color:#fff;text-decoration:none;}
-.pagin .current,.pagin .current:link,.pagin .current:visited{color:#fff;font-weight:bold; border:1px solid #FF6600;}
+.pagin a:hover,.pagin a:active{background:#005aa0;color:#fff;text-decoration:none;}
+.pagin .current,.pagin .current:link,.pagin .current:visited{color:#fff;font-weight:bold; border:1px solid #005aa0;}
 .pagin .prev,.pagin .next,.pagin .prev-disabled,.pagin .next-disabled{position:relative;padding-top:4px;height:18px;line-height:16px;}
 .pagin .prev-disabled,.pagin .next-disabled{color:#ccc;cursor:default;}
 .pagin .prev,.pagin .prev-disabled{padding-left:12px;}
 .pagin .prev b{left:3px;background-position:-68px -608px;}
 .pagin .next,.pagin .next-disabled{padding-right:12px;}
 
-.pagin-m a,.pagin-m span{height:14px;line-height:14px;font-size:12px;}
+.pagin-m a,.pagin-m span{height:22px;line-height:22px;font-size:12px;}
 .pagin-m b{top:5px;}
 .pagin-m .prev,.pagin-m .next,.pagin-m .prev-disabled,.pagin-m .next-disabled{padding-top:3px;height:16px;line-height:14px;*line-height:16px;}
+.pagin {border-left: 1px solid #FFFFFF; float: right; height: 22px;padding:7px 10px 0px 0px;}
+
+/*#service*/
+#service dl b{background-image:url(i/footer.png);background-repeat:no-repeat;}
+#service{padding:10px 20px;margin-bottom:20px;background:#FFF;border-top:1px solid #DDD;border-bottom:1px solid #F1F1F1;border-left:none;border-right:none; border-radius:0;}
+#service dl{float:left;width:188px;}
+#service dt{position:relative;padding:6px 0 6px 44px;font:14px "microsoft yahei";zoom:1;}
+#service dd{min-height:100px;padding-left:24px;margin-left:20px;line-height:20px; _height:100px;}
+#service dt b{position:absolute;top:5px;left:0;width:40px;height:40px;}
+#service dl.fore1 b{background-position:0 0 ;}
+#service dl.fore2 b{background-position:0 -40px;}
+#service dl.fore3 b{background-position:0 -80px;}
+#service dl.fore4 b{background-position:0 -120px;}
+#service dl.fore5 b{background-position:0 -160px;}
+#service dl.fore5{width:188px;}
+#service .fr{display:none;}
+*html #service dd{height:120px;}
+#service dd{ background:none;}
+
+#ft{width:100%;margin:0 auto; background:#fff; height:380px;  padding-top:10px;}
 

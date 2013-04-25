@@ -33,10 +33,16 @@ class indexAction extends frontendAction {
             F('index_cate_list', $index_cate_list);
         }
 
+        if (false === $cate_list = F('cate_list')) {
+            $cate_list = D('item_cate')->cate_cache();
+        }
+
         //发现
         $hot_tags = explode(',', C('pin_hot_tags')); //热门标签
         $hot_tags = array_slice($hot_tags, 0, 12);
-        $this->waterfall('', 'hits DESC,id DESC', '', C('pin_book_page_max'), 'book/index');
+        //$this->waterfall('', 'hits DESC,id DESC', '', C('pin_book_page_max'), 'book/index');
+		$this->get_items();
+        $this->assign('cate_list', $cate_list);
 
         $this->assign('index_cate_list', $index_cate_list);
         $this->assign('hot_tags', $hot_tags);

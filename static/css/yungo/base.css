@@ -235,7 +235,7 @@ a:active {
 }
 
 .w {
-    width: 980px;
+    width: 990px;
     margin: 0 auto;
 }
 
@@ -254,6 +254,8 @@ a:active {
   width: 100%;
   border-bottom: 1px solid #eee;
   line-height: 30px;
+  position: absolute;
+  z-index: 10000;
 }
 .global-nav li {
   height: 30px;
@@ -386,6 +388,10 @@ a:active {
 }
 
 /*header*/
+#o-header {
+  padding-top: 30px;
+}
+
 #header {
   height: 60px;
   padding: 15px 0;
