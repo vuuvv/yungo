@@ -77,29 +77,6 @@ class bookAction extends frontendAction {
      * 按分类查看
      */
     public function cate() {
-        $cid = $this->_get('cid', 'intval');
-        !$cid && $this->_404();
-        //分类数据
-        if (false === $cate_data = F('cate_data')) {
-            $cate_data = D('item_cate')->cate_data_cache();
-        }
-        //当前分类信息
-        if (isset($cate_data[$cid])) {
-            $cate_info = $cate_data[$cid];
-        } else {
-            $this->_404();
-        }
-        //分类列表
-        if (false === $cate_list = F('cate_list')) {
-            $cate_list = D('item_cate')->cate_cache();
-        }
-        //分类关系
-        if (false === $cate_relate = F('cate_relate')) {
-            $cate_relate = D('item_cate')->relate_cache();
-        }
-        //获取当前分类的顶级分类
-        $tid = $cate_relate[$cid]['tid'];
-
         //商品
         $sort = $this->_get('sort', 'trim', 'pop');
         $min_price = $this->_get('min_price', 'intval');
@@ -118,15 +95,44 @@ class bookAction extends frontendAction {
                 $order = 'id DESC';
                 break;
         }
+
+        //分类数据
+        if (false === $cate_data = F('cate_data')) {
+            $cate_data = D('item_cate')->cate_data_cache();
+        }
+        //分类列表
+        if (false === $cate_list = F('cate_list')) {
+            $cate_list = D('item_cate')->cate_cache();
+        }
+        //分类关系
+        if (false === $cate_relate = F('cate_relate')) {
+            $cate_relate = D('item_cate')->relate_cache();
+        }
+
+        $cid = $this->_get('cid', 'intval');
+        $no_cate = true;
+        if ($cid) {
+            $no_cate = false;
+            //当前分类信息
+            if (isset($cate_data[$cid])) {
+                $cate_info = $cate_data[$cid];
+            } else {
+                $this->_404();
+            }
+            //获取当前分类的顶级分类
+            $tid = $cate_relate[$cid]['tid'];
+        }
+
         //分类
-        if ($cate_info['type'] == 0) {
+        if ($no_cate || $cate_info['type'] == 0) {
             $min_price && $where['price'][] = array('egt', $min_price);
             $max_price && $where['price'][] = array('elt', $max_price); //价格
             //实物分类
             $cate_relate[$cid]['sids'][] = $cid;
-            $where['cate_id'] = array('in', $cate_relate[$cid]['sids']);
+            if (!$no_cate)
+                $where['cate_id'] = array('in', $cate_relate[$cid]['sids']);
 
-            $this->waterfall($where, $order);
+            $this->get_items($where, $order);
         } else {
             //标签组
             $min_price && $where['i.price'][] = array('egt', $min_price);

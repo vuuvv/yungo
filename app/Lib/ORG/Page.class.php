@@ -65,6 +65,84 @@ class Page {
         }
     }
 
+    public function get_helper($max_pagers = 6) {
+        $ret = array();
+        $total = intval($this->totalPages);
+        $pagesize = $this->listRows;
+        $current = $this->nowPage;
+        $after = $total - $current;
+        $half = intval($max_pagers / 2);
+        $min = 1;
+        $max = $total;
+        $needfirst = $needlast = true;
+        if ($total <= $max_pagers) {
+            $needfirst = false;
+            $needlast = false;
+        } else if ($current < $half) {
+            $min = 1;
+            $max = $max_pagers;
+            $needfirst = false;
+        } else if ($after < $half) {
+            $min = $total - $max_pagers + 1;
+            $max = $total;
+            $needlast = false;
+        } else {
+            $min = $current - $half + 1;
+            $max = $current + $half;
+        }
+        $ret['min'] = $min;
+        $ret['max'] = $max;
+        $ret['needfirst'] = $needfirst;
+        $ret['needlast'] = $needlast;
+
+        return $ret;
+    }
+
+    public function get_qs($page)
+    {
+        $qs = array();
+        foreach ($_GET as $key => $val) {
+            $qs[$key] = $val;
+        }
+        $qs['p'] = $page;
+        return $qs;
+    }
+
+    public function get_url($page)
+    {
+        return U($this->path, $this->get_qs($page));
+    }
+
+    public function next_url()
+    {
+        return $this->get_url($this->nowPage + 1);
+    }
+
+    public function prev_url()
+    {
+        return $this->get_url($this->nowPage - 1);
+    }
+
+    public function first_url()
+    {
+        return $this->get_url(1);
+    }
+
+    public function last_url()
+    {
+        return $this->get_url($this->totalPages);
+    }
+
+    public function is_last()
+    {
+        return $this->nowPage == $this->totalPages;
+    }
+
+    public function is_first()
+    {
+        return $this->nowPage == 1;
+    }
+
     /**
      * 分页显示输出
      * @access public

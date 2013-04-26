@@ -89,7 +89,7 @@ class frontendAction extends baseAction {
         return $pager;
     }
 
-	public function get_items($where = array(), $order = 'id DESC', $field = '', $page_max = '', $target = '') {
+    public function get_items($where = array(), $order = 'id DESC', $field = '', $page_max = '', $target = '') {
         $spage_size = C('pin_wall_spage_size'); //每次加载个数
         $spage_max = C('pin_wall_spage_max'); //每页加载次数
         $page_size = $spage_size * $spage_max; //每页显示个数
@@ -100,19 +100,20 @@ class frontendAction extends baseAction {
         $count = $item_mod->where($where)->count('id');
         $field == '' && $field = 'id,uid,uname,title,intro,img,price,likes,comments,comments_cache';
 
-		$pager = $this->_pager($count, $page_size);
-		$item_list = $item_mod->field($field)->where($where)->order($order)->limit($pager->firstRow.','.$page_size)->select();
+        $pager = $this->_pager($count, $page_size);
+        $item_list = $item_mod->field($field)->where($where)->order($order)->limit($pager->firstRow.','.$page_size)->select();
         foreach ($item_list as $key=>$val) {
             isset($val['comments_cache']) && $item_list[$key]['comment_list'] = unserialize($val['comments_cache']);
         }
 
         $this->assign('item_list', $item_list);
-		$this->assign('pager', $pager);
+        $this->assign('pager', $pager);
+        $this->assign('helper', $pager->get_helper());
 
         //当前页码
         $p = $this->_get('p', 'intval', 1);
         $this->assign('p', $p);
-	}
+    }
 
     /**
      * 瀑布显示

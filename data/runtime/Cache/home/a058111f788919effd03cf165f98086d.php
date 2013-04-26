@@ -122,9 +122,9 @@ $(function() {
 		<div class="menu_left_hotel">分类：</div>
 		<div class="menu_right_hotel haveb">
 			<ul class="b1">
-				<a title="全部" href="/channel/entity-beijing-0-0-0-1-0-0-0-0-0.html" class="on">全部</a>
+				<a title="全部" href="<?php echo U('book/cate');?>" class="on">全部</a>
 				<?php if(is_array($cate_list['p'])): $i = 0; $__LIST__ = $cate_list['p'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$bcate): $mod = ($i % 2 );++$i;?><li>
-				<a title="<?php echo ($bcate["name"]); ?>" href="/channel/entity-beijing-98-0-0-1-0-0-0-0-0.html"><?php echo ($bcate["name"]); ?></a>
+				<a title="<?php echo ($bcate["name"]); ?>" href="<?php echo U('book/cate', array('cid'=>$bcate['id']));?>"><?php echo ($bcate["name"]); ?></a>
 				</li><?php endforeach; endif; else: echo "" ;endif; ?>
 			</ul>
 		</div>
@@ -132,14 +132,14 @@ $(function() {
 	<div class="menu_w">
 		<div class="menu_left_hotel">价格：</div>
 		<div class="menu_right_hotel haveb">
-			<a title="全部" href="/channel/entity-beijing-98-0-0-1-0-0-0-0-0.html" class="on">全部</a>
+			<a title="全部" href="<?php echo U('book/cate');?>" class="on">全部</a>
 			<ul class="b1">
-				<li><a title="0-49元" href="/channel/entity-beijing-98-1-0-1-0-0-0-0-0.html">0-49元</a></li>
-				<li><a title="50-99元" href="/channel/entity-beijing-98-2-0-1-0-0-0-0-0.html">50-99元</a></li>
-				<li><a title="100-199元" href="/channel/entity-beijing-98-3-0-1-0-0-0-0-0.html">100-199元</a></li>
-				<li><a title="200-499元" href="/channel/entity-beijing-98-4-0-1-0-0-0-0-0.html">200-499元</a></li>
-				<li><a title="500-999元" href="/channel/entity-beijing-98-5-0-1-0-0-0-0-0.html">500-999元</a></li>
-				<li><a title="1000元以上" href="/channel/entity-beijing-98-6-0-1-0-0-0-0-0.html">1000元以上</a></li>
+				<li><a title="0-49元" href="<?php echo U('book/cate', array('max_price'=>'49'));?>">0-49元</a></li>
+				<li><a title="50-99元" href="<?php echo U('book/cate', array('min_price'=>'50', 'max_price'=>'99'));?>">50-99元</a></li>
+				<li><a title="100-199元" href="<?php echo U('book/cate', array('min_price'=>'100', 'max_price'=>'199'));?>">100-199元</a></li>
+				<li><a title="200-499元" href="<?php echo U('book/cate', array('min_price'=>'200', 'max_price'=>'499'));?>">200-499元</a></li>
+				<li><a title="500-999元" href="<?php echo U('book/cate', array('min_price'=>'500', 'max_price'=>'999'));?>">500-999元</a></li>
+				<li><a title="1000元以上" href="<?php echo U('book/cate', array('min_price'=>'1000'));?>">1000元以上</a></li>
 			</ul>
 		</div>
 	</div>
@@ -150,9 +150,22 @@ $(function() {
 			<a title="销量由高到低" href="/beijing-0-0-0-0-1-1-1-0-0.html"></a>
 			<a title="价格由低到高" href="/beijing-0-0-0-0-2-1-1-0-0.html"></a>
 		</div>
-		<div class="pagin pagin-m"><span class="text"><?php echo ($pager->nowPage); ?>/<?php echo ($pager->totalPages); ?></span><span class="prev-disabled">上一页</span><a href="" class="next">下一页</a></div></div>
+		<div class="pagin pagin-m">
+			<span class="text"><?php echo ($pager->nowPage); ?>/<?php echo ($pager->totalPages); ?></span>
+			<?php if ($pager->is_first()) { ?>
+				<span class="next-disabled">上一页</span>
+			<?php } else { ?>
+				<a href="<?php echo ($pager->prev_url()); ?>" class="next">上一页</a>
+			<?php } ?>
+			<?php if ($pager->is_last()) { ?>
+				<span class="next-disabled">下一页</span>
+			<?php } else { ?>
+				<a href="<?php echo ($pager->next_url()); ?>" class="next">下一页</a>
+			<?php } ?>
+		</div>
 		<div class="clr"></div>
 	</div>
+	<div class="clr"></div>
 </div>
 <div class="w">
 	<div class="l">
@@ -173,7 +186,7 @@ $(function() {
 				</div>
 				<!--非团购专场-->
 				<div class="buy">
-					<span>$<?php echo ($item["price"]); ?></span>
+					<span><?php echo ($item["price"]); ?></span>
 					<span class="tg">
 						<a title="<?php echo ($item["title"]); ?>" target="_blank" href="<?php echo U('item/index', array('id'=>$item['id']));?>"></a>
 					</span>
@@ -182,7 +195,30 @@ $(function() {
 			<div class="clr"></div>
 		</div>
 		<div class="page">
-		<div class="pagin fr"><span class="prev-disabled">上一页</span><a href="/beijing-0-0-0-0-0-1-1-0-0.html" class="current">1</a><a href="/beijing-0-0-0-0-0-1-2-0-0.html">2</a><a href="/beijing-0-0-0-0-0-1-3-0-0.html">3</a><a href="/beijing-0-0-0-0-0-1-2-0-0.html" class="next">下一页</a></div>			</div>
+		<div class="pagin fr">
+			<?php if ($pager->is_first()) { ?>
+				<span class="next-disabled">上一页</span>
+			<?php } else { ?>
+				<a href="<?php echo ($pager->prev_url()); ?>" class="next">上一页</a>
+			<?php } ?>
+			<?php if ($helper['needfirst']) { ?>
+				<a href="<?php echo ($pager->first_url()); ?>" >1</a>
+				<span class="text">...</span>
+			<?php } ?>
+			<?php for ($i = $helper['min']; $i <= $helper['max']; $i++) { ?>
+			<a href="<?php echo ($pager->get_url($i)); ?>" <?php if ($pager->nowPage == $i) { ?>class="current"<?php } ?>><?php echo $i; ?></a>
+			<?php } ?>
+			<?php if ($helper['needlast']) { ?>
+				<span class="text">...</span>
+				<a href="<?php echo ($pager->last_url()); ?>" ><?php echo ($pager->totalPages); ?></a>
+			<?php } ?>
+			<?php if ($pager->is_last()) { ?>
+				<span class="next-disabled">下一页</span>
+			<?php } else { ?>
+				<a href="<?php echo ($pager->next_url()); ?>" class="next">下一页</a>
+			<?php } ?>
+		</div>
+	</div>
 	</div>
 </div>
 <div class="clr"></div>

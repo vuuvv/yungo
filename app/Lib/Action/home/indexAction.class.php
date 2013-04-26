@@ -41,7 +41,7 @@ class indexAction extends frontendAction {
         $hot_tags = explode(',', C('pin_hot_tags')); //热门标签
         $hot_tags = array_slice($hot_tags, 0, 12);
         //$this->waterfall('', 'hits DESC,id DESC', '', C('pin_book_page_max'), 'book/index');
-		$this->get_items();
+        $this->get_items();
         $this->assign('cate_list', $cate_list);
 
         $this->assign('index_cate_list', $index_cate_list);

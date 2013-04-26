@@ -27,33 +27,33 @@
 </div><?php endif; ?>
 <!--添加商品-->
 <div class="subnav">
-    <h1 class="title_2 line_x">添加商品</h1>
+	<h1 class="title_2 line_x">添加商品</h1>
 </div>
 <form id="info_form" action="<?php echo u('item/add');?>" method="post" enctype="multipart/form-data">
 <div class="pad_lr_10">
 	<div class="col_tab">
 		<ul class="J_tabs tab_but cu_li">
 			<li class="current">基本信息</li>
-            <li>展示图片</li>
+			<li>展示图片</li>
 			<li>SEO设置</li>
-            <li>附加属性</li>
+			<li>附加属性</li>
 		</ul>
 		<div class="J_panes">
-        <div class="content_list pad_10">
+		<div class="content_list pad_10">
 		<table width="100%" cellpadding="2" cellspacing="1" class="table_form">
 			<tr>
 				<th width="120">所属分类 :</th>
-                <td><select class="J_cate_select mr10" data-pid="0" data-uri="<?php echo U('item_cate/ajax_getchilds', array('type'=>0));?>" data-selected=""></select><input type="hidden" name="cate_id" id="J_cate_id" value="" /></td>
+				<td><select class="J_cate_select mr10" data-pid="0" data-uri="<?php echo U('item_cate/ajax_getchilds', array('type'=>0));?>" data-selected=""></select><input type="hidden" name="cate_id" id="J_cate_id" value="" /></td>
 			</tr>
-            <tr>
+			<tr>
 				<th>商品名称 :</th>
 				<td><input type="text" name="title" id="J_title" class="input-text" size="60"></td>
 			</tr>
 			<tr>
-                <th>商品简介 :</th>
-                <td><textarea name="intro" cols="80" rows="2"></textarea></td>
-            </tr>
-            <tr>
+				<th>商品简介 :</th>
+				<td><textarea name="intro" cols="80" rows="2"></textarea></td>
+			</tr>
+			<tr>
 				<th>商品图片 :</th>
 				<td><input type="file" name="img" /></td>
  			</tr>
@@ -61,44 +61,48 @@
 				<th>链接地址 :</th>
 				<td><input type="text" name="url" class="input-text" size="50"></td>
 			</tr>
-            <tr>
+			<tr>
 				<th>商品标签 :</th>
 				<td>
-                	<input type="text" name="tags" id="J_tags" class="input-text" size="50">
-                    <input type="button" value="<?php echo L('auto_get');?>" id="J_gettags" name="tags_btn" class="btn">
-                </td>
+					<input type="text" name="tags" id="J_tags" class="input-text" size="50">
+					<input type="button" value="<?php echo L('auto_get');?>" id="J_gettags" name="tags_btn" class="btn">
+				</td>
 			</tr>
-            <tr>
+			<tr>
 				<th>商品价格 :</th>
 				<td><input type="text" name="price" class="input-text" size="10"> 元</td>
 			</tr>
 			<tr>
+				<th>30内成交 :</th>
+				<td><input type="text" name="volume" class="input-text" size="10"></td>
+			</tr>
+			<tr>
 				<th width="120">商品来源 :</th>
-                <td>
+				<td>
 				<select name="orig_id" id="orig_id">
-            	<?php if(is_array($orig_list)): $i = 0; $__LIST__ = $orig_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value="<?php echo ($val["id"]); ?>"><?php echo ($val["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-            	</select></td>
+				<?php if(is_array($orig_list)): $i = 0; $__LIST__ = $orig_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value="<?php echo ($val["id"]); ?>"><?php echo ($val["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+				</select></td>
 			</tr>  
-            <tr>
-	            <th>采集马甲 :</th>
-	            <td>
-	                <select name="auid">
-	                    <?php if(is_array($auto_user)): $i = 0; $__LIST__ = $auto_user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value="<?php echo ($val["id"]); ?>"><?php echo ($val["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-	                </select>
-	            </td>
-	        </tr>
+			<tr>
+				<th>采集马甲 :</th>
+				<td>
+					<select name="auid">
+						<?php if(is_array($auto_user)): $i = 0; $__LIST__ = $auto_user;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><option value="<?php echo ($val["id"]); ?>"><?php echo ($val["name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+					</select>
+				</td>
+			</tr>
 		</table>
 		</div>
-        <div class="content_list pad_10 hidden">
-            <table width="100%" cellpadding="2" cellspacing="1" class="table_form" id="first_upload_file">
-                <tbody class="uplode_file">
-                <tr>
-                    <th width="100"><a href="javascript:void(0);" class="blue" onclick="add_file();"><img src="__STATIC__/css/admin/bgimg/tv-expandable.gif" /></a> 上传文件 :</th>
-                    <td><input type="file" name="imgs[]"></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+		<div class="content_list pad_10 hidden">
+			<table width="100%" cellpadding="2" cellspacing="1" class="table_form" id="first_upload_file">
+				<tbody class="uplode_file">
+				<tr>
+					<th width="100"><a href="javascript:void(0);" class="blue" onclick="add_file();"><img src="__STATIC__/css/admin/bgimg/tv-expandable.gif" /></a> 上传文件 :</th>
+					<td><input type="file" name="imgs[]"></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
 		<div class="content_list pad_10 hidden">
 		<table width="100%" cellpadding="2" cellspacing="1" class="table_form">
 			<tr>
@@ -115,19 +119,19 @@
 			</tr>
 		</table>
 		</div>
-        <div class="content_list pad_10 hidden">
+		<div class="content_list pad_10 hidden">
 		<table width="100%" cellpadding="2" cellspacing="1" class="table_form" id="item_attr">
 			<tbody class="add_item_attr">
-            <tr>
-                <th width="210">
-                <a href="javascript:void(0);" class="blue" onclick="add_attr();"><img src="__STATIC__/css/admin/bgimg/tv-expandable.gif" /></a> 属性名 :<input type="text" name="attr[name][]" class="input-text" size="20">
-                </th>
-                <td> 属性值 :<input type="text" name="attr[value][]" class="input-text" size="30"></td>
-            </tr>
-            </tbody>
+			<tr>
+				<th width="210">
+				<a href="javascript:void(0);" class="blue" onclick="add_attr();"><img src="__STATIC__/css/admin/bgimg/tv-expandable.gif" /></a> 属性名 :<input type="text" name="attr[name][]" class="input-text" size="20">
+				</th>
+				<td> 属性值 :<input type="text" name="attr[value][]" class="input-text" size="30"></td>
+			</tr>
+			</tbody>
 		</table>
 		</div>
-        </div>
+		</div>
 		<div class="mt10"><input type="submit" value="<?php echo L('submit');?>" class="btn btn_submit"></div>
 	</div>
 </div>
@@ -179,7 +183,7 @@ $(function() {
 
 function add_file()
 {
-    $("#next_upload_file .uplode_file").clone().insertAfter($("#first_upload_file .uplode_file:last"));
+	$("#next_upload_file .uplode_file").clone().insertAfter($("#first_upload_file .uplode_file:last"));
 }
 function del_file_box(obj)
 {
@@ -187,7 +191,7 @@ function del_file_box(obj)
 }
 function add_attr()
 {
-    $("#hidden_attr .add_item_attr").clone().insertAfter($("#item_attr .add_item_attr:last"));
+	$("#hidden_attr .add_item_attr").clone().insertAfter($("#item_attr .add_item_attr:last"));
 }
 function del_attr(obj)
 {
@@ -197,18 +201,18 @@ function del_attr(obj)
 <table id="next_upload_file" style="display:none;">
 <tbody class="uplode_file">
    <tr>
-      <th width="100"><a href="javascript:void(0);" onclick="del_file_box(this);" class="blue"><img src="__STATIC__/css/admin/bgimg/tv-collapsable.gif" /></a>上传文件 :</th>
-      <td><input type="file" name="imgs[]"></td>
+	  <th width="100"><a href="javascript:void(0);" onclick="del_file_box(this);" class="blue"><img src="__STATIC__/css/admin/bgimg/tv-collapsable.gif" /></a>上传文件 :</th>
+	  <td><input type="file" name="imgs[]"></td>
    </tr>
 </tbody>
 </table>
 <table id="hidden_attr" style="display:none;">
 <tbody class="add_item_attr">
 <tr>
-    <th width="200">
-    <a href="javascript:void(0);" class="blue" onclick="del_attr(this);"><img src="__STATIC__/css/admin/bgimg/tv-collapsable.gif" /></a>属性名 :<input type="text" name="attr[name][]" class="input-text" size="20">
-    </th>
-    <td>属性值 :<input type="text" name="attr[value][]" class="input-text" size="30"></td>
+	<th width="200">
+	<a href="javascript:void(0);" class="blue" onclick="del_attr(this);"><img src="__STATIC__/css/admin/bgimg/tv-collapsable.gif" /></a>属性名 :<input type="text" name="attr[name][]" class="input-text" size="20">
+	</th>
+	<td>属性值 :<input type="text" name="attr[value][]" class="input-text" size="30"></td>
 </tr>
 </tbody>
 </table>

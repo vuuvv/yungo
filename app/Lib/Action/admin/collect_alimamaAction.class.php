@@ -187,7 +187,8 @@ class collect_alimamaAction extends backendAction {
             'url' => $item['click_url'],
             'rates' => $item['commission_rate'] / 100,
             'likes' => $item['likes'],
-            'imgs' => $item['imgs']
+            'imgs' => $item['imgs'],
+            'volume' => $item['volume']
         );
         //如果多图为空
         if (empty($item['imgs'])) {
