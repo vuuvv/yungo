@@ -1,1 +1,0 @@
-2013-04-25 15:55:36	<?xml version="1.0" encoding="utf-8" ?><error_response><code>530</code><msg>Remote service error</msg><sub_code>isv.missing-parameter:numIids</sub_code><sub_msg>缺少num_iids</sub_msg></error_response><!--vsandbox067146.cm4.tbsite.net-->
