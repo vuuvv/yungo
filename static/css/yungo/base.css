@@ -204,8 +204,10 @@ body {
   font: 12px/150% Arial, Verdana, "\5b8b\4f53";
   color: #333;
   background: #fff;
+  /*
   _background-image: url(about:blank);
   _background-attachment: fixed;
+  */
 }
 
 h1 {
@@ -235,7 +237,7 @@ a:active {
 }
 
 .w {
-    width: 990px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -544,4 +546,23 @@ a:active {
 #navitems .curr a, #navitems .hover a, #navitems a:hover {
   background: #A40000;
 }
+
+/*#service*/
+#service dl b{background-image:url(i/footer.png);background-repeat:no-repeat;}
+#service{padding:10px 20px;margin-bottom:20px;background:#FFF;border-top:1px solid #DDD;border-bottom:1px solid #F1F1F1;border-left:none;border-right:none; border-radius:0;}
+#service dl{float:left;width:188px;}
+#service dt{position:relative;padding:6px 0 6px 44px;font:14px "microsoft yahei";zoom:1;}
+#service dd{min-height:100px;padding-left:24px;margin-left:20px;line-height:20px; _height:100px;}
+#service dt b{position:absolute;top:5px;left:0;width:40px;height:40px;}
+#service dl.fore1 b{background-position:0 0 ;}
+#service dl.fore2 b{background-position:0 -40px;}
+#service dl.fore3 b{background-position:0 -80px;}
+#service dl.fore4 b{background-position:0 -120px;}
+#service dl.fore5 b{background-position:0 -160px;}
+#service dl.fore5{width:188px;}
+#service .fr{display:none;}
+*html #service dd{height:120px;}
+#service dd{ background:none;}
+
+#ft{width:100%;margin:0 auto; background:#fff; height:380px;  padding-top:10px;}
 

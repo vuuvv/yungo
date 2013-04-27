@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<include file="public:head" />
+<css file="__STATIC__/css/yungo/list.css" />
+</head>
+<body>
+<include file="public:header" />
+<div class="w category">
+	<div class="category">
+		<div id="categories" bk="" class="category-hd category-man">
+			<ul>
+				<volist name="cate_list['p']" id="bcate">
+				<li <if condition="$tid eq $bcate['id']">class="current"</if>><a href="{:U('items/cate', array('cid'=>$bcate['id']))}" ><span class="first"><em>{$bcate.name}</em></span></a></li>
+				</volist>
+			</ul>
+		</div>
+		<!-- start inner -->
+		<div id="lable-tag4320" bk="" class="fill no_border">
+			<div class="category-bd">
+				<!-- 首页 S -->
+				<div class="category-cont">
+					<volist name="cate_list['s'][$tid]" id="mcate">
+					<div class="category-item">
+						<div class="category-item-hd">
+							<h3>{$mcate.name}</h3>
+						</div>
+						<!-- 每列显示五条数据  -->
+						<div class="category-cont-wrap">
+							<?php
+								$scates = $cate_list['s'][$mcate['id']];
+								$keys = array_keys($scates);
+								for ($i = 0; $i < count($scates); $i+=4) {
+							?>
+							<p class="category-item-cont">
+							<?php 
+							for ($j = 0; $j < 4; $j++) { 
+								$index = $i + $j;
+								if ($index >= count($scates))
+									break;
+								$key = $keys[$i + $j];
+							?>
+							<a href="{:U('items/cate', array('cid'=>$scates[$key]['id']))}"><span>{$scates[$key].name}</span></a>
+							<?php } ?>
+							</p>
+							<?php } ?>
+						</div>
+					</div>
+					</volist>
+				</div>
+				<!-- 首页 E -->
+			</div>
+			<span class="radius radius-l-b"></span><span class="radius radius-r-b"></span>
+		</div>
+		<!-- end inner -->
+	</div>
+</div>
+<div class="w">
+	<div class="l">
+		<div class="pro">
+			<volist name="item_list" id="item">
+			<div class="product">
+				<div class="title">
+					<span>积分</span>
+					<a title="{$item.title}" target="_blank" href="{:U('item/index', array('id'=>$item['id']))}">{$item.title}</a>
+				</div>
+				<div class="pic">
+					<a target="_blank" href="{:U('item/index', array('id'=>$item['id']))}">
+						<img width="210" height="210" alt="{$item.title}" src="{:attach(get_thumb($item['img'], '_m'), 'item')}" class="err-product"></a>
+					<div class="new_icon"></div>
+				</div>
+				<div class="price">
+					<!--非团购专场-->
+					<span><font>2</font>人已购买</span>
+				</div>
+				<!--非团购专场-->
+				<div class="buy">
+					<span>{$item.price}</span>
+					<span class="tg">
+						<a title="{$item.title}" target="_blank" href="{:U('item/index', array('id'=>$item['id']))}"></a>
+					</span>
+				</div>
+			</div>
+			</volist>
+			<div class="clr"></div>
+		</div>
+		<div class="page">
+		<div class="pagin fr">
+			<?php if ($pager->totalPages > 1) { ?>
+				<?php if ($pager->is_first()) { ?>
+					<span class="next-disabled">上一页</span>
+				<?php } else { ?>
+					<a href="{$pager:prev_url()}" class="next">上一页</a>
+				<?php } ?>
+				<?php if ($helper['needfirst']) { ?>
+					<a href="{$pager->first_url()}" >1</a>
+					<span class="text">...</span>
+				<?php } ?>
+				<?php for ($i = $helper['min']; $i <= $helper['max']; $i++) { ?>
+				<a href="{$pager->get_url($i)}" <?php if ($pager->nowPage == $i) { ?>class="current"<?php } ?>><?php echo $i; ?></a>
+				<?php } ?>
+				<?php if ($helper['needlast']) { ?>
+					<span class="text">...</span>
+					<a href="{$pager->last_url()}" >{$pager:totalPages}</a>
+				<?php } ?>
+				<?php if ($pager->is_last()) { ?>
+					<span class="next-disabled">下一页</span>
+				<?php } else { ?>
+					<a href="{$pager:next_url()}" class="next">下一页</a>
+				<?php } ?>
+			<?php } ?>
+		</div>
+	</div>
+	</div>
+</div>
+<div class="clr"></div>
+<include file="public:footer" />
+</body>
+</html>
+
