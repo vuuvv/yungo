@@ -1,6 +1,6 @@
 <!--添加商品来源分类-->
 <div class="dialog_content">
-	<form id="info_form" name="info_form" action="{:u('item_orig/add')}" method="post">
+	<form id="info_form" name="info_form" action="{:U('item_orig/add')}" method="post">
 	<table width="100%" cellpadding="2" cellspacing="1" class="table_form">
 		<tr>
 			<th width="100">来源名称 :</th>
@@ -22,7 +22,7 @@
 </div>
 <script src="__STATIC__/js/fileuploader.js"></script>
 <script>
-var check_name_url = "{:U('item_orig/ajax_check_name')}";
+	var check_name_url = <?php echo html_entity_decode(U('item_orig/ajax_check_name')); ?>;
 $(function(){
 	$.formValidator.initConfig({formid:"info_form",autotip:true});
 	$("#name").formValidator({onshow:lang.please_input+'来源名称',onfocus:lang.please_input+'来源名称'}).inputValidator({min:1,onerror:lang.please_input+'来源名称'}).ajaxValidator({

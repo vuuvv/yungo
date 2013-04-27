@@ -20,25 +20,18 @@ defined('THINK_PATH') or exit();
 class CacheFile extends Cache {
 
     /**
-     * 缓存存储前缀
-     * @var string
-     * @access protected
-     */
-    protected $prefix   =   '~@';
-
-    /**
      * 架构函数
      * @access public
      */
-    public function __construct($options='') {
+    public function __construct($options=array()) {
         if(!empty($options)) {
             $this->options =  $options;
         }
-        $this->options['temp'] = !empty($options['temp'])?$options['temp']:C('DATA_CACHE_PATH');
-        $this->options['expire'] = isset($options['expire'])?$options['expire']:C('DATA_CACHE_TIME');
-        $this->options['length']  =  isset($options['length'])?$options['length']:0;
+        $this->options['temp']      =   !empty($options['temp'])?   $options['temp']    :   C('DATA_CACHE_PATH');
+        $this->options['prefix']    =   isset($options['prefix'])?  $options['prefix']  :   C('DATA_CACHE_PREFIX');
+        $this->options['expire']    =   isset($options['expire'])?  $options['expire']  :   C('DATA_CACHE_TIME');
+        $this->options['length']    =   isset($options['length'])?  $options['length']  :   0;
         if(substr($this->options['temp'], -1) != '/')    $this->options['temp'] .= '/';
-        $this->connected = is_dir($this->options['temp']) && is_writeable($this->options['temp']);
         $this->init();
     }
 
@@ -61,15 +54,6 @@ class CacheFile extends Cache {
     }
 
     /**
-     * 是否连接
-     * @access public
-     * @return boolen
-     */
-    private function isConnected() {
-        return $this->connected;
-    }
-
-    /**
      * 取得变量的存储文件名
      * @access private
      * @param string $name 缓存变量名
@@ -84,11 +68,11 @@ class CacheFile extends Cache {
                 $dir	.=	$name{$i}.'/';
             }
             if(!is_dir($this->options['temp'].$dir)) {
-                mkdir($this->options['temp'].$dir,0777,true);
+                mkdir($this->options['temp'].$dir,0755,true);
             }
-            $filename	=	$dir.$this->prefix.$name.'.php';
+            $filename	=	$dir.$this->options['prefix'].$name.'.php';
         }else{
-            $filename	=	$this->prefix.$name.'.php';
+            $filename	=	$this->options['prefix'].$name.'.php';
         }
         return $this->options['temp'].$filename;
     }
@@ -101,7 +85,7 @@ class CacheFile extends Cache {
      */
     public function get($name) {
         $filename   =   $this->filename($name);
-        if (!$this->isConnected() || !is_file($filename)) {
+        if (!is_file($filename)) {
            return false;
         }
         N('cache_read',1);

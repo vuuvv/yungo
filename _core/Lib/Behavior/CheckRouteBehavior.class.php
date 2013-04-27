@@ -28,7 +28,6 @@ class CheckRouteBehavior extends Behavior {
     public function run(&$return){
         // 优先检测是否存在PATH_INFO
         $regx = trim($_SERVER['PATH_INFO'],'/');
-        __EXT__ && $regx = $regx . '.' . __EXT__;
         if(empty($regx)) return $return = true;
         // 是否开启路由使用
         if(!C('URL_ROUTER_ON')) return $return = false;
@@ -38,9 +37,8 @@ class CheckRouteBehavior extends Behavior {
         if(!empty($routes)) {
             $depr = C('URL_PATHINFO_DEPR');
             // 分隔符替换 确保路由定义使用统一的分隔符
-            //$regx = str_replace($depr,'/',$regx);
-            foreach ($routes as $rule=>$route) {
-                $rule = str_replace('\\/$/', '$/', $rule); //替换最后一个目录
+            $regx = str_replace($depr,'/',$regx);
+            foreach ($routes as $rule=>$route){
                 if(0===strpos($rule,'/') && preg_match($rule,$regx,$matches)) { // 正则路由
                     return $return = $this->parseRegex($matches,$route,$regx);
                 }else{ // 规则路由

@@ -154,7 +154,11 @@ class collect_alimamaAction extends backendAction {
             $taobaoke_item_list = F('taobaoke_item_list');
             foreach ($taobaoke_item_list as $key => $val) {
                 if (in_array($key, $ids_arr)) {
-                    $this->_publish_insert($val, $cate_id, $users);
+                    var_dump($val);
+                    $result = $this->_publish_insert($val, $cate_id, $users);
+                    if (!$result) {
+                        $this->ajaxReturn(0, L('operation_failure'), '', 'publish');
+                    }
                 }
             }
             $this->ajaxReturn(1, L('operation_success'), '', 'publish');
