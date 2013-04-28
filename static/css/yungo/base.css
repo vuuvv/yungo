@@ -203,7 +203,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 body {
   font: 12px/150% Arial, Verdana, "\5b8b\4f53";
   color: #333;
-  background: #fff;
+  background: #F2EEEB;
   /*
   _background-image: url(about:blank);
   _background-attachment: fixed;
@@ -254,7 +254,7 @@ a:active {
 }
 .global-nav {
   width: 100%;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
   line-height: 30px;
   position: absolute;
   z-index: 10000;
@@ -423,7 +423,7 @@ a:active {
 #search {
   float: left;
   width: 510px;
-  padding: 4px 126px 0 0;
+  padding: 12px 126px 0 0;
 }
 #search input {
   margin: 0;
@@ -566,3 +566,38 @@ a:active {
 
 #ft{width:100%;margin:0 auto; background:#fff; height:380px;  padding-top:10px;}
 
+.footer{padding:19px 0 29px;border-top:1px solid #e0d3cd;background:#fff;color:#666;text-align:center;}
+.footer a{margin:0 5px;color:#2e74d3;}
+.footer .slogan{width:323px;height:28px;overflow:hidden;margin:19px auto 0;background:url(http://p2.qhimg.com/t01f4a54aeda4777c82.png) no-repeat 0 0;line-height:300px;}
+
+/* css sprite */
+.radius,
+.pagination-item a,
+.pagination-item .current,
+.pagination-pre,
+.pagination-next,
+.i-like .info,
+.i-like .i-like-tips,
+.hot-style-item li a:hover,
+.hot-style-item li a:hover span,
+.show-item .rounded-corners-t,
+.show-item .rounded-corners-b,
+.show-item-hover .rounded-corners-t,
+.show-item-hover .rounded-corners-b,
+.category-hd li span,
+.category-hd .current span,
+.category-hd .current a,
+.showlist-top h2
+{background:url(http://p5.qhimg.com/t01bf5b413861a5c6c3.png) no-repeat; _background:url(http://p5.qhimg.com/t0179f24ade7233ad46.png) no-repeat;}
+
+/* i-like  */
+.i-like{position:relative;z-index:100;width:97px;height:24px;}
+.i-like .info{display:block;height:24px;padding:0 0 0 27px;background-position:0 -193px;color:#fff;line-height:24px;}
+.i-like .info:hover{background-position:-101px -193px;}
+.i-like .info strong{display:inline-block;width:38px;margin:0 0 0 6px;color:#ff6780;text-align:center;}
+.i-like .i-like-tips{position:absolute;left:0;bottom:16px;z-index:-1;width:97px;height:0px;overflow:hidden;background-position:0 -446px;}
+.i-like .i-like-tips a{display:none;}
+.i-like .i-like-delete{background-position:-102px -446px;}
+.i-like .i-like-delete a{display:block;height:100%;padding-right:5px;color:#2e74d3;line-height:60px;text-align:right;text-decoration:underline;}
+.product-idetail-hd .i-like{position:absolute;right:14px;top:12px;}
+.i-like a { text-decoration: none; }

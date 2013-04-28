@@ -12,10 +12,10 @@
 		<div class="menu_left_hotel">分类：</div>
 		<div class="menu_right_hotel haveb">
 			<ul class="b1">
-				<a title="全部" href="{:U('book/cate')}" class="on">全部</a>
+				<a title="全部" href="{:U('items/cate')}" class="on">全部</a>
 				<volist name="cate_list['p']" id="bcate">
 				<li>
-				<a title="{$bcate.name}" href="{:U('book/cate', array('cid'=>$bcate['id']))}">{$bcate.name}</a>
+				<a title="{$bcate.name}" href="{:U('items/cate', array('cid'=>$bcate['id']))}">{$bcate.name}</a>
 				</li>
 				</volist>
 			</ul>
@@ -24,14 +24,13 @@
 	<div class="menu_w">
 		<div class="menu_left_hotel">价格：</div>
 		<div class="menu_right_hotel haveb">
-			<a title="全部" href="{:U('book/cate')}" class="on">全部</a>
+			<a title="全部" href="{:U('items/cate')}" class="on">全部</a>
 			<ul class="b1">
-				<li><a title="0-49元" href="{:U('book/cate', array('max_price'=>'49'))}">0-49元</a></li>
-				<li><a title="50-99元" href="{:U('book/cate', array('min_price'=>'50', 'max_price'=>'99'))}">50-99元</a></li>
-				<li><a title="100-199元" href="{:U('book/cate', array('min_price'=>'100', 'max_price'=>'199'))}">100-199元</a></li>
-				<li><a title="200-499元" href="{:U('book/cate', array('min_price'=>'200', 'max_price'=>'499'))}">200-499元</a></li>
-				<li><a title="500-999元" href="{:U('book/cate', array('min_price'=>'500', 'max_price'=>'999'))}">500-999元</a></li>
-				<li><a title="1000元以上" href="{:U('book/cate', array('min_price'=>'1000'))}">1000元以上</a></li>
+				<li><a title="0-49元" href="{:U('items/cate', array('max_price'=>'49'))}">0-49元</a></li>
+				<li><a title="50-99元" href="{:U('items/cate', array('min_price'=>'50', 'max_price'=>'99'))}">50-99元</a></li>
+				<li><a title="100-199元" href="{:U('items/cate', array('min_price'=>'100', 'max_price'=>'299'))}">100-199元</a></li>
+				<li><a title="200-499元" href="{:U('items/cate', array('min_price'=>'200', 'max_price'=>'499'))}">300-499元</a></li>
+				<li><a title="1000元以上" href="{:U('items/cate', array('min_price'=>'500'))}">500元以上</a></li>
 			</ul>
 		</div>
 	</div>

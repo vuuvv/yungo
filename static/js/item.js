@@ -1,8 +1,3 @@
-/**
- * @name 商品
- * @author andery@foxmail.com
- * @url http://www.yungo.com
- */
 ;(function($){
     $.yungo.item = {
         settings: {

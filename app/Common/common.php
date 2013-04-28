@@ -134,6 +134,9 @@ function get_thumb($img, $suffix = '_thumb') {
                 case '_m':
                     $thumb = $img . '_210x1000.jpg';
                     break;
+                case '_mm':
+                    $thumb = $img . '_310x310.jpg';
+                    break;
                 case '_b':
                     $thumb = $img . '_480x480.jpg';
                     break;

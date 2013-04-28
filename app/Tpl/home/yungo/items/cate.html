@@ -3,6 +3,7 @@
 <head>
 <include file="public:head" />
 <css file="__STATIC__/css/yungo/list.css" />
+<css file="__STATIC__/css/yungo/index.css" />
 </head>
 <body>
 <include file="public:header" />
@@ -25,7 +26,7 @@
 						<div class="category-item-hd">
 							<h3>{$mcate.name}</h3>
 						</div>
-						<!-- 每列显示五条数据  -->
+						<!-- 每列显示四条数据  -->
 						<div class="category-cont-wrap">
 							<?php
 								$scates = $cate_list['s'][$mcate['id']];
@@ -34,25 +35,72 @@
 							?>
 							<p class="category-item-cont">
 							<?php 
-							for ($j = 0; $j < 4; $j++) { 
+							for ($j = 0; $j < 4; $j++) {
 								$index = $i + $j;
 								if ($index >= count($scates))
 									break;
 								$key = $keys[$i + $j];
+								$scate = $scates[$key];
 							?>
-							<a href="{:U('items/cate', array('cid'=>$scates[$key]['id']))}"><span>{$scates[$key].name}</span></a>
+							<a href="{:U('items/cate', array('cid'=>$scate['id']))}" <if condition="$cate_info['id'] eq $scate['id']">class="current"</if>><span>{$scate.name}</span></a>
 							<?php } ?>
 							</p>
 							<?php } ?>
 						</div>
 					</div>
 					</volist>
+					<div class="clr"></div>
 				</div>
 				<!-- 首页 E -->
 			</div>
 			<span class="radius radius-l-b"></span><span class="radius radius-r-b"></span>
 		</div>
 		<!-- end inner -->
+		<div id="chujian_filter" bk="" class="filter-tools">
+			<dl class="item">
+				<dt>价格：</dt>
+				<dd class="price">
+				<a href="{:U('items/cate', array('cid'=>$cate_info['id'], 'sort'=>$sort))}" <if condition="$min_price eq '' AND $max_price eq ''">class="current"</if>>
+					<span class="bg-wrap">
+						<span class="bg-outer">
+							<span class="bg-inner">全部</span>
+						</span>
+					</span>
+				</a>
+				<a href="{:U('items/cate', array('cid'=>$cate_info['id'], 'sort'=>$sort, 'max_price'=>'49'))}" <if condition="$max_price eq '49'">class="current"</if>>
+					<span class="bg-wrap">
+						<span class="bg-outer">
+							<span class="bg-inner">0~49</span>
+						</span>
+					</span>
+
+				</a>
+				<a href="{:U('items/cate', array('cid'=>$cate_info['id'], 'sort'=>$sort, 'min_price'=>'50', 'max_price'=>'199'))}" <if condition="$min_price eq '50'">class="current"</if>>
+					<span class="bg-wrap">
+						<span class="bg-outer">
+							<span class="bg-inner">50~199</span>
+						</span>
+					</span>
+				</a>
+				<a href="{:U('items/cate', array('cid'=>$cate_info['id'], 'sort'=>$sort, 'min_price'=>'200', 'max_price'=>'499'))}" <if condition="$min_price eq '200'">class="current"</if>>
+					<span class="bg-wrap">
+						<span class="bg-outer">
+							<span class="bg-inner">200~499</span>
+						</span>
+					</span>
+
+				</a>
+				<a href="{:U('items/cate', array('cid'=>$cate_info['id'], 'sort'=>$sort, 'min_price'=>'500'))}" <if condition="$min_price eq '500'">class="current"</if>>
+					<span class="bg-wrap">
+						<span class="bg-outer">
+							<span class="bg-inner">500元以上</span>
+						</span>
+					</span>
+				</a>
+				</dd>
+			</dl>
+		</div>
+		
 	</div>
 </div>
 <div class="w">
@@ -67,11 +115,13 @@
 				<div class="pic">
 					<a target="_blank" href="{:U('item/index', array('id'=>$item['id']))}">
 						<img width="210" height="210" alt="{$item.title}" src="{:attach(get_thumb($item['img'], '_m'), 'item')}" class="err-product"></a>
+					<if condition="1 eq 2">
 					<div class="new_icon"></div>
+					</if>
 				</div>
 				<div class="price">
 					<!--非团购专场-->
-					<span><font>2</font>人已购买</span>
+					<span><font>{$item.volume}</font>人已购买</span>
 				</div>
 				<!--非团购专场-->
 				<div class="buy">
@@ -84,9 +134,9 @@
 			</volist>
 			<div class="clr"></div>
 		</div>
+		<?php if ($pager->totalPages > 1) { ?>
 		<div class="page">
 		<div class="pagin fr">
-			<?php if ($pager->totalPages > 1) { ?>
 				<?php if ($pager->is_first()) { ?>
 					<span class="next-disabled">上一页</span>
 				<?php } else { ?>
@@ -108,9 +158,9 @@
 				<?php } else { ?>
 					<a href="{$pager:next_url()}" class="next">下一页</a>
 				<?php } ?>
-			<?php } ?>
 		</div>
 	</div>
+	<?php } ?>
 	</div>
 </div>
 <div class="clr"></div>

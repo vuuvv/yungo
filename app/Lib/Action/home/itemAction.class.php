@@ -18,8 +18,10 @@ class itemAction extends frontendAction {
         $id = $this->_get('id', 'intval');
         !$id && $this->_404();
         $item_mod = M('item');
-        $item = $item_mod->field('id,title,uid,uname,intro,price,url,likes,comments,tag_cache,seo_title,seo_keys,seo_desc,add_time')->where(array('id' => $id, 'status' => 1))->find();
+        $item = $item_mod->field('id,cate_id,title,uid,uname,intro,price,url,likes,comments,tag_cache,seo_title,seo_keys,seo_desc,add_time')->where(array('id' => $id, 'status' => 1))->find();
         !$item && $this->_404();
+        //分类
+        $similar = $item_mod->where(array('cate_id' => $item['cate_id']))->limit(0, 12)->select();
         //来源
         $orig = M('item_orig')->field('name,img')->find($item['orig_id']);
         //商品相册
@@ -48,6 +50,7 @@ class itemAction extends frontendAction {
 
         $item_mod->where(array('id' => $id))->setInc('hits'); //点击量
         $this->assign('item', $item);
+        $this->assign('similar', $similar);
         $this->assign('orig', $orig);
         $this->assign('maylike_list', $maylike_list);
         $this->assign('img_list', $img_list);

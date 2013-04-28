@@ -158,7 +158,7 @@ class itemsAction extends frontendAction {
         $this->assign('sort', $sort); //排序
         $this->assign('min_price', $min_price); //最低价格
         $this->assign('max_price', $max_price); //最高价格
-        $this->assign('nav_curr', 'cate'); //导航设置
+        $this->assign('nav_curr', 'items'); //导航设置
         //SEO
         $this->_config_seo(C('pin_seo_config.cate'), array(
             'cate_name' => $cate_info['name'],

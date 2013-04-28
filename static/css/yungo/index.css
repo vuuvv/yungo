@@ -1,9 +1,7 @@
 /* for hotel city begin */
 body {
-	background: #f8f8f8;
 }
 #o-header {
-	background: #fff;
 }
 /* for hotel city begin */
 .menu_w{ width:966px; height:auto; float:left; padding-left:20px;}
@@ -76,7 +74,7 @@ body {
 .yjfk{ position:absolute; bottom:-40px; left:890px; width:100px; height:28px; line-height:28px; text-align:center; background: url(i/yjfk_bg.gif); z-index:100;}
 .l{ width:990px; float:left; padding-top:10px; overflow:hidden;}
 .page{ width:990px; height:25px; padding:20px 0px 10px 0px; float:left; text-align:right; position:relative;}
-.l .page{ width:990px; height:25px; padding:0px 0px 10px 0px; float:left; text-align:right; position:relative;}
+.l .page{ width:990px; height:25px; padding:0px 0px 20px 0px; float:left; text-align:right; position:relative;}
 .l .pro{ width:1005px; float:left; height:auto;z-index:1; overflow:hidden;}
 .l .adad{ width:1005px; float:left; height:auto;z-index:1; overflow:hidden;}
 
