@@ -1,7 +1,7 @@
 /**
  * @name 简洁版城市下拉
  * @author andery@foxmail.com
- * @url http://www.pinphp.com
+ * @url http://www.yungo.com
  */
  ;(function($){
     $.minicity = function(pn, cn, pv, cv) {

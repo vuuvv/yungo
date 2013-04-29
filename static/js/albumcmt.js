@@ -1,10 +1,10 @@
 /**
  * @name 专辑评论
  * @author andery@foxmail.com
- * @url http://www.pinphp.com
+ * @url http://www.yungo.com
  */
 ;(function($){
-    $.pinphp.albumcmt = {
+    $.yungo.albumcmt = {
         settings: {
             container: '#J_albumcmt_area',
             page_list: '#J_albumcmt_list',
@@ -13,13 +13,13 @@
             pub_btn: '#J_albumcmt_submit'
         },
         init: function(options){
-            options && $.extend($.pinphp.albumcmt.settings, options);
-            $.pinphp.albumcmt.list();
-            $.pinphp.albumcmt.publish();
+            options && $.extend($.yungo.albumcmt.settings, options);
+            $.yungo.albumcmt.list();
+            $.yungo.albumcmt.publish();
         },
         //列表
         list: function(){
-            var s = $.pinphp.albumcmt.settings;
+            var s = $.yungo.albumcmt.settings;
             $('li', $(s.page_list)).live({
                 mouseover: function(){
                     $(this).addClass('hover');
@@ -35,7 +35,7 @@
                         $(s.page_list).html(result.data.list);
                         $(s.page_bar).html(result.data.page);
                     }else{
-                        $.pinphp.tip({content:result.msg, icon:'error'});
+                        $.yungo.tip({content:result.msg, icon:'error'});
                     }
                 });
                 return false;
@@ -43,9 +43,9 @@
         },
         //发表评论
         publish: function(){
-            var s = $.pinphp.albumcmt.settings;
+            var s = $.yungo.albumcmt.settings;
             $(s.pub_btn).live('click', function(){
-                if(!$.pinphp.dialog.islogin()) return !1;
+                if(!$.yungo.dialog.islogin()) return !1;
                 var aid = $(s.container).attr('data-aid'),
                     dv = $(s.pub_content).attr('def-val'),
                     content = $(s.pub_content).val();
@@ -54,7 +54,7 @@
                     return false;
                 }
                 $.ajax({
-                    url: PINER.root + '/?m=album&a=comment',
+                    url: YUNGO.root + '/?m=album&a=comment',
                     type: 'POST',
                     data: {
                         id: aid,
@@ -66,12 +66,12 @@
                             $(s.pub_content).val('');
                             $(s.page_list).prepend(result.data);
                         }else{
-                            $.pinphp.tip({content:result.msg, icon:'error'});
+                            $.yungo.tip({content:result.msg, icon:'error'});
                         }
                     }
                 });
             });
         }
     };
-    $.pinphp.albumcmt.init();
+    $.yungo.albumcmt.init();
 })(jQuery);

@@ -7,7 +7,7 @@
  * preview 预览图片大图
  * cate_select 多级菜单动态加载
  * 
- * http://www.pinphp.com
+ * http://www.yungo.com
  * author: andery@foxmail.com
  */
 ;$(function($){
@@ -35,14 +35,14 @@
 				if(acttype == 'ajax'){
 					$.getJSON(uri, function(result){
 						if(result.status == 1){
-							$.pinphp.tip({content:result.msg});
+							$.yungo.tip({content:result.msg});
 							if(callback != undefined){
 								eval(callback+'(self)');
 							}else{
 								window.location.reload();
 							}
 						}else{
-							$.pinphp.tip({content:result.msg, icon:'error'});
+							$.yungo.tip({content:result.msg, icon:'error'});
 						}
 					});
 				}else{

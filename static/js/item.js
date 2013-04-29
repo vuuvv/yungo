@@ -42,7 +42,7 @@
                     id = self.attr('data-id'),
                     aid = self.attr('data-aid'),
                     n = parseInt(nb.html());
-                $.getJSON(PINER.root + '/?m=item&a=like', {id:id, aid:aid}, function(result){
+                $.getJSON(YUNGO.root + '/?m=item&a=like', {id:id, aid:aid}, function(result){
                     if(result.status == 1){
                         //喜欢成功
                         nb.text(n+1).show();
@@ -60,7 +60,7 @@
                 if(!$.yungo.dialog.islogin()) return !1;
                 var self = $(this),
                     id = self.attr('data-id');
-                $.getJSON(PINER.root + '/?m=item&a=unlike', {id:id}, function(result){
+                $.getJSON(YUNGO.root + '/?m=item&a=unlike', {id:id}, function(result){
                     if(result.status == 1){
                         self.parents(s.item_unit).slideUp(500, function(){
                             $(this).parent().masonry('remove', $(this)).masonry('reload');
@@ -79,7 +79,7 @@
                 var self = $(this),
                     id = self.attr('data-id'),
                     album_id = self.attr('data-aid');
-                $.getJSON(PINER.root + '/?m=item&a=delete', {id:id, album_id:album_id}, function(result){
+                $.getJSON(YUNGO.root + '/?m=item&a=delete', {id:id, album_id:album_id}, function(result){
                     if(result.status == 1){
                         self.parents(s.item_unit).slideUp(500, function(){
                             $(this).parent().masonry('remove', $(this)).masonry('reload');
@@ -102,7 +102,7 @@
                 var title = $(s.select_album).find('.J_qc_title').val(),
                     cate_id = $(s.select_album).find('.J_qc_cate').val();
                 $.ajax({
-                    url: PINER.root + '/?m=album&a=create_album',
+                    url: YUNGO.root + '/?m=album&a=create_album',
                     type: 'POST',
                     data: {
                         title: title,
@@ -150,7 +150,7 @@
                 var id = $(this).attr('data-id');
                 $(this).hide();
                 $.dialog({id:'join_album', title:lang.join_album, padding:'', fixed:true, lock:true});
-                $.getJSON(PINER.root + '/?m=album&a=join', {id:id}, function(result){
+                $.getJSON(YUNGO.root + '/?m=album&a=join', {id:id}, function(result){
                     if(result.status == 1){
                         $.dialog.get('join_album').content(result.data);
                         $.yungo.item.joinalbum_form($('#J_join_album'));
@@ -166,7 +166,7 @@
             $(s.share_btn).live('click', function(){
                 if(!$.yungo.dialog.islogin()) return !1;
                 var aid = $(this).attr('data-aid');
-                $.getJSON(PINER.root + '/?m=item&a=share_item', function(result){
+                $.getJSON(YUNGO.root + '/?m=item&a=share_item', function(result){
                     if(result.status == 1){
                         $.dialog({id:'share_item', title:lang.share_title, content:result.data, padding:'', fixed:true, lock:true});
                         $.yungo.item.share_form($('#J_share_item'), aid);
@@ -181,7 +181,7 @@
                 var si_url = $.trim($('.si_url').val());
                 if(!$.yungo.util.isURl(si_url)) return $.yungo.tip({content:lang.please_input+lang.correct_itemurl, icon:'alert'}), !1;
                 $.dialog.get('share_item').title(false).content('<div class="d_loading">'+lang.wait+'</div>');
-                $.getJSON(PINER.root + '/?m=item&a=fetch_item', {url:si_url, aid:aid}, function(result){
+                $.getJSON(YUNGO.root + '/?m=item&a=fetch_item', {url:si_url, aid:aid}, function(result){
                     if(result.status == 1){
                         $.yungo.item.fetch(result.data);
                     }else{
@@ -203,7 +203,7 @@
                     ac_id = $('.J_df_cate').val(),
                     intro = form.find('.J_intro').val();
                 $.ajax({
-                    url: PINER.root + '/?m=item&a=publish_item',
+                    url: YUNGO.root + '/?m=item&a=publish_item',
                     type: 'POST',
                     data: {
                         item: item,

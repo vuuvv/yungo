@@ -54,7 +54,7 @@
                     return false;
                 }
                 $.ajax({
-                    url: PINER.root + '/?m=item&a=comment',
+                    url: YUNGO.root + '/?m=item&a=comment',
                     type: 'POST',
                     data: {
                         id: id,

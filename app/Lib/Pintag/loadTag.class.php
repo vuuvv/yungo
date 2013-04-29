@@ -26,7 +26,7 @@ class loadTag {
                 $val = str_replace('__STATIC__', $statics_url, $val);
                 $content.=file_get_contents($val);
             }
-            file_put_contents($path, $this->jm->minify($content));
+           file_put_contents($path, $this->jm->minify($content));
         }
         echo ( '<script type="text/javascript" src="' . __ROOT__ . '/data/static/' . md5($options['href']) . '.js?' . PIN_RELEASE . '"></script>');
     }

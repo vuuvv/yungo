@@ -12,7 +12,7 @@
 .album_top .album_daren li .user_info a{font-size:12px;color:#76ad21;font-weight:bold;}
 .album_top .album_add{width:192px;margin:0 0 0 13px;}
 .album_top .album_add .title{margin:40px 0 0 0;color:#9a6e4c;font-size:16px;font-family:'\5FAE\8F6F\96C5\9ED1';padding:10px 2px 0 14px;}
-.album_top .album_add .reco_album_link{height:37px;width:130px;margin:22px auto 26px;color:#fff;font-size:16px;display:block;background:#8fc63b;line-height:37px;text-align:center;font-weight:bold;}
+.cate_sort .reco_album_link{height:37px;width:130px;margin:22px auto 26px;color:#fff;font-size:16px;display:block;background:#8fc63b;line-height:37px;text-align:center;font-weight:bold;}
 .album_top .album_add .mgmg{padding:18px 0 0;color:#777;border-top:1px dashed #ececec;}
 .album_top .album_add .mgmg a{color:#6b9e00;font-weight:bold;text-decoration:underline;}
 

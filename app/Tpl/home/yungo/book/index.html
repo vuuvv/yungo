@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<include file="public:head" />
+<include file="old:head" />
 </head>
 <body>
 <include file="public:header" />
@@ -29,9 +29,8 @@
                     <a href="{:U('book/index',array('tag'=>urlencode($val)))}" title="{$tag}" <if condition="$tag eq $val">class="current"</if>>{$val}</a>
                     </volist>
                 </div>
-                {:R('advert/index', array(12), 'Widget')}
             </div>
-            <include file="public:waterfall" />
+            <include file="old:waterfall" />
         </div>
         <present name="show_load">
         <div id="J_wall_loading" class="wall_loading tc gray"><span>{:L('loading')}</span></div>
@@ -44,6 +43,6 @@
     </div>
 
 </div>
-<include file="public:footer" />
+<include file="old:footer" />
 </body>
 </html>

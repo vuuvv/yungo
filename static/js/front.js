@@ -1,23 +1,23 @@
 /**
  * @name 前台UI&TOOLS
  * @author andery@foxmail.com
- * @url http://www.pinphp.com
+ * @url http://www.yungo.com
  */
 ;(function($){
-    $.pinphp.init = function(){
-        $.pinphp.ui.init();
-        $.pinphp.tool.sendmail();
-        $.pinphp.tool.msgtip();
+    $.yungo.init = function(){
+        $.yungo.ui.init();
+        $.yungo.tool.sendmail();
+        $.yungo.tool.msgtip();
     }
-    $.pinphp.ui = {
+    $.yungo.ui = {
         init: function() {
-            $.pinphp.ui.input_init();
-            $.pinphp.ui.fixed_nav();
-            $.pinphp.ui.return_top();
-            $.pinphp.ui.drop_down();
-            $.pinphp.ui.decode_img($(document));
-            //$.pinphp.ui.lazyload();
-            $.pinphp.ui.captcha();
+            $.yungo.ui.input_init();
+            $.yungo.ui.fixed_nav();
+            $.yungo.ui.return_top();
+            $.yungo.ui.drop_down();
+            $.yungo.ui.decode_img($(document));
+            //$.yungo.ui.lazyload();
+            $.yungo.ui.captcha();
         },
         lazyload: function() {
             $('img').lazyload();
@@ -93,22 +93,22 @@
         decode_img: function(context) {
             $('.J_decode_img', context).each(function(){
                 var uri = $(this).attr('data-uri')||"";
-                $(this).attr('src', $.pinphp.util.base64_decode(uri));  
+                $(this).attr('src', $.yungo.util.base64_decode(uri));  
             });
         }
     },
-    $.pinphp.tool = {
+    $.yungo.tool = {
         //发送邮件
         sendmail: function() {
-            return PINER.async_sendmail ? ($.get(PINER.root + '/?a=send_mail'), !0) : !1;
+            return YUNGO.async_sendmail ? ($.get(YUNGO.root + '/?a=send_mail'), !0) : !1;
         },
         //信息提示
         msgtip: function() {
-            if(PINER.uid){
+            if(YUNGO.uid){
                 var is_update = !1;
                 var update = function() {
                     is_update = !0;
-                    $.getJSON(PINER.root + '/?m=user&a=msgtip', function(result){
+                    $.getJSON(YUNGO.root + '/?m=user&a=msgtip', function(result){
                         if(result.status == 1){
                             var fans = parseInt(result.data.fans),
                                 atme = parseInt(result.data.atme),
@@ -129,5 +129,5 @@
             }
         }
     }
-    $.pinphp.init();
+    $.yungo.init();
 })(jQuery);

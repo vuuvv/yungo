@@ -1,21 +1,21 @@
 /**
  * @name 弹窗
  * @author andery@foxmail.com
- * @url http://www.pinphp.com
+ * @url http://www.yungo.com
  */
 ;(function($){
-    $.pinphp.dialog = {
+    $.yungo.dialog = {
         //登陆
         islogin: function(){
-            return "" == PINER.uid ? ($.pinphp.dialog.login(), !1) : !0;
+            return "" == YUNGO.uid ? ($.yungo.dialog.login(), !1) : !0;
         },
         login: function(){
-            $.getJSON(PINER.root + '/?m=user&a=login', function(result){
+            $.getJSON(YUNGO.root + '/?m=user&a=login', function(result){
                 if(result.status == 0){
-                    $.pinphp.tip({content:result.msg, icon:'error'});
+                    $.yungo.tip({content:result.msg, icon:'error'});
                 }else{
                     $.dialog({id:'login', title:lang.login_title, content:result.data, padding:'', fixed:true, lock:true});
-                    $.pinphp.dialog.dlogin_form($('#J_dlogin_form'));
+                    $.yungo.dialog.dlogin_form($('#J_dlogin_form'));
                 }
             });
         },

@@ -1,10 +1,10 @@
 /**
  * @name 用户相关
  * @author andery@foxmail.com
- * @url http://www.pinphp.com
+ * @url http://www.yungo.com
  */
 ;(function($){
-    $.pinphp.user = {
+    $.yungo.user = {
         settings: {
             card_btn: '.J_card',
             layer_html: '<div id="J_card_layer" class="user_card"><div id="J_card_info"></div><div class="J_card_arrow card_arrow"></div></div>',
@@ -15,55 +15,55 @@
             add_all_html: '<span class="fo_u_all">互相关注</span><a href="javascript:;" class="J_unfo_u green">取消</a>'
         },
         init: function(options){
-            options && $.extend($.pinphp.user.settings, options);
-            var s = $.pinphp.user.settings;
+            options && $.extend($.yungo.user.settings, options);
+            var s = $.yungo.user.settings;
             //名片
-            $.pinphp.user.card();
+            $.yungo.user.card();
             //名片上的关注
-            $.pinphp.user.follow();
+            $.yungo.user.follow();
             //名片上的取消关注
-            $.pinphp.user.unfollow();
+            $.yungo.user.unfollow();
             //绑定表单
-            $.pinphp.user.bind_form();
+            $.yungo.user.bind_form();
         },
         //关注(需要登陆)
         follow: function(){
-            var s = $.pinphp.user.settings;
+            var s = $.yungo.user.settings;
             $(s.follow_bar).find('.J_fo_u').live('click', function(){
-                if(!$.pinphp.dialog.islogin()) return !1;
+                if(!$.yungo.dialog.islogin()) return !1;
                 var self = $(this),
                     uid = $(this).parent().attr('data-uid');
-                $.getJSON(PINER.root + '/?m=user&a=follow', {uid:uid}, function(result){
+                $.getJSON(YUNGO.root + '/?m=user&a=follow', {uid:uid}, function(result){
                     if(result.status == 1){
                         result.data == 1 ? self.parent().html(s.add_ok_html) : self.parent().html(s.add_all_html);
                         $("body").data(uid, false);
                     }else{
-                        $.pinphp.tip({content:result.msg,  icon:'error'});
+                        $.yungo.tip({content:result.msg,  icon:'error'});
                     }
                 });
             });
         },
         //取消关注(需要登陆)
         unfollow: function(){
-            var s = $.pinphp.user.settings;
+            var s = $.yungo.user.settings;
             $(s.follow_bar).find('.J_unfo_u').live('click', function(){
-                if(!$.pinphp.dialog.islogin()) return !1;
+                if(!$.yungo.dialog.islogin()) return !1;
                 if(!confirm(lang.confirm_unfollow)) return !1;
                 var self = $(this),
                     uid = $(this).parent().attr('data-uid');
-                $.getJSON(PINER.root + '/?m=user&a=unfollow', {uid:uid}, function(result){
+                $.getJSON(YUNGO.root + '/?m=user&a=unfollow', {uid:uid}, function(result){
                     if(result.status == 1){
                         self.parent().html(s.add_btn_html);
                         $("body").data(uid, false);
                     }else{
-                        $.pinphp.tip({content:result.msg,  icon:'error'});
+                        $.yungo.tip({content:result.msg,  icon:'error'});
                     }
                 });
             });
         },
         //显示名片
         card: function(){
-            var s = $.pinphp.user.settings,
+            var s = $.yungo.user.settings,
                 h = null,
                 n = null;
             $(s.card_btn).live({
@@ -105,7 +105,7 @@
                         $("#J_card_info").html($('body').data(uid));
                     }else{
                         n = setTimeout(function(){
-                            $.getJSON(PINER.root + '/?m=space&a=card', {uid:uid}, function(result){
+                            $.getJSON(YUNGO.root + '/?m=space&a=card', {uid:uid}, function(result){
                                 if(result.status == 1){
                                     $("#J_card_info").html(result.data);
                                     $("body").data(uid, result.data);
@@ -113,7 +113,7 @@
                                 }else{
                                     clearTimeout(h);
                                     clearTimeout(n);
-                                    $.pinphp.tip({content:result.msg,  icon:'error'});
+                                    $.yungo.tip({content:result.msg,  icon:'error'});
                                 }
                             });
                         }, 500);
@@ -166,7 +166,7 @@
                 .regexValidator({regexp:'email',datatype:'enum',onerror:lang.email_format_error})
                 .ajaxValidator({
                     type: 'get',
-                    url: PINER.root + '/?m=user&a=ajax_check',
+                    url: YUNGO.root + '/?m=user&a=ajax_check',
                     data: 'type=email',
                     datatype: 'json',
                     async:'false',
@@ -183,7 +183,7 @@
                 .inputValidator({max:20,onerror:lang.username_tip})
                 .ajaxValidator({
                     type: 'get',
-                    url: PINER.root + '/?m=user&a=ajax_check',
+                    url: YUNGO.root + '/?m=user&a=ajax_check',
                     data: 'type=username',
                     datatype: 'json',
                     async:'false',
@@ -218,7 +218,7 @@
             .regexValidator({regexp:'email',datatype:'enum',onerror:lang.email_format_error})
             .ajaxValidator({
                 type: 'get',
-                url: PINER.root + '/?m=user&a=ajax_check',
+                url: YUNGO.root + '/?m=user&a=ajax_check',
                 data: 'type=email',
                 datatype: 'json',
                 async:'false',
@@ -234,7 +234,7 @@
             .inputValidator({max:20,onerror:lang.username_tip})
             .ajaxValidator({
                 type: 'get',
-                url: PINER.root + '/?m=user&a=ajax_check',
+                url: YUNGO.root + '/?m=user&a=ajax_check',
                 data: 'type=username',
                 datatype: 'json',
                 async:'false',
@@ -255,5 +255,5 @@
             .inputValidator({min:1,onerror:lang.captcha_empty});
         }
     };
-    $.pinphp.user.init(); //用户
+    $.yungo.user.init(); //用户
 })(jQuery);

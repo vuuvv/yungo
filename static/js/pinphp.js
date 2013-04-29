@@ -1,6 +1,6 @@
 ;(function($){
-    $.pinphp = $.pinphp || {version: "v1.0.0"},
-    $.extend($.pinphp, {
+    $.yungo = $.yungo || {version: "v1.0.0"},
+    $.extend($.yungo, {
         util: {
             getStrLength: function(str) {
                 str = $.trim(str);
@@ -113,7 +113,7 @@
 
 ;(function($){
     //提示信息
-    $.pinphp.tip = function(options) {
+    $.yungo.tip = function(options) {
         var settings = {
             content: '',
             icon: 'success',
@@ -146,7 +146,7 @@
 
 ;(function($) {
     //焦点图
-    $.pinphp.photo_slide = function() {
+    $.yungo.photo_slide = function() {
         var f = arguments.length;
         if (! (f != 1 && f < 4)) {
             var a = {},
@@ -157,13 +157,13 @@
                 feedWidth: arguments[3],
                 feedBoxClass: arguments[4]
             }: arguments[0];
-            if (!$.pinphp.util.empty(a) && !$.pinphp.util.empty(a.listID) && !$.pinphp.util.empty(a.listBtnID) && !$.pinphp.util.empty(a.feedClassName) && !$.pinphp.util.empty(a.feedWidth) && $("#" + a.listID).size() != 0) {
+            if (!$.yungo.util.empty(a) && !$.yungo.util.empty(a.listID) && !$.yungo.util.empty(a.listBtnID) && !$.yungo.util.empty(a.feedClassName) && !$.yungo.util.empty(a.feedWidth) && $("#" + a.listID).size() != 0) {
                 var e = 0,
                 d = 1,
                 j = null,
                 h = [],
                 g = null,
-                g = $.pinphp.util.empty(a.feedBoxClass) ? $("#" + a.listID + " ul") : $("#" + a.listID + " ." + a.feedBoxClass),
+                g = $.yungo.util.empty(a.feedBoxClass) ? $("#" + a.listID + " ul") : $("#" + a.listID + " ." + a.feedBoxClass),
                 k = function() {
                     $("#" + a.listBtnID + " li").removeClass("c");
                     $("#" + a.listBtnID + " li").eq(d % e).addClass("c");
@@ -222,7 +222,7 @@
             input_id: 'J_img',
             input_name: 'img',
             showMessage: function(message){
-                $.pinphp.tip({content:message, icon:'error'});
+                $.yungo.tip({content:message, icon:'error'});
             },
             onSubmit: function(id, fileName){
             },
@@ -230,7 +230,7 @@
                 if(result.status == '1'){
                     $('#'+settings.input_id).val(result.data);
                 }else{
-                    $.pinphp.tip({content:result.msg, icon:'error'});
+                    $.yungo.tip({content:result.msg, icon:'error'});
                 }
             }
         };
